@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "Burger Tasty",
+        "price": "6",
+        "image": "./asset/burger-menu1.png"
+    },
+    {
+        "id": 2,
+        "name": "Donnut burger",
+        "price": "5",
+        "image": "./asset/burger-menu2.png"
+    },
+    {
+        "id": 3,
+        "name": "Burger végétal",
+        "price": "7.30",
+        "image": "./asset/burger-menu3.png"
+    },
+    {
+        "id": 4,
+        "name": "Classique",
+        "price": "5.30",
+        "image": "./asset/burger-menu4.png"
+    },
+    {
+        "id": 5,
+        "name": "Bacon",
+        "price": "8",
+        "image": "./asset/burger-menu5.png"
+    },
+    {
+        "id": 6,
+        "name": "Le régional",
+        "price": "5.30",
+        "image": "./asset/burger-menu2.png"
+    },
+    {
+        "id": 7,
+        "name": "Le créatif",
+        "price": "7",
+        "image": "./asset/burger-menu7.png"
+    },
+    {
+        "id": 8,
+        "name": "Le Petit Prince",
+        "price": "5.30",
+        "image": "./asset/burger-menu8.png"
+    },
+    {
+        "id": 9,
+        "name": "Le Star Wars",
+        "price": "4.30",
+        "image": "./asset/burger-menu9.png"
+    }
+]

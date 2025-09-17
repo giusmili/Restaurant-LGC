@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/android-chrome-512x512.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="stylesheet" href="./css/apropos.css">
+    <title>A propos</title>
+</head>
+<body>
+    <header>
+            <figure class="logo">
+                <figcaption>
+                      <a href="./index.html"><img src="./asset/logo_lgc.png" alt="La grande classe"></a>
+                </figcaption>
+            </figure>
+            <nav>
+                <ul>
+                    <li><a href="./index.html" class="nav-link">Accueil</a></li>
+                    <li class="separateur"></li>
+                    <li><a href="./menu.html" class="nav-link">Menu</a></li>
+                    <li class="separateur"></li>
+                    <li><a href="./reservation.html" class="nav-link">Reservation</a></li>
+                    <li class="separateur"></li>
+                    <li><a href="./galerie.html" class="nav-link">Galerie</a></li>
+                    <li class="separateur"></li>
+                    <li><a href="./apropos.html" class="nav-link active">A propos</a></li>
+                    <li class="separateur"></li>
+                    <li><a href="./contact.html" class="nav-link">Contact</a></li>
+                    <li class="last-separateur"></li>
+                </ul>
+                <button class="btn-command">Commander</button>
+            </nav>
+            <div class="burger-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+    </header>
+    <!--Mon main -->
+    <main>
+        <section class="presentation">
+            <h1>A PROPOS</h1>
+            <p>"Qui sommes-nous ? Une histoire de passion, de saveurs et de partage."</p>
+        </section>
+        <section class="premiere">
+            <div class="description-apropos">
+                <h2>Le restaurant</h2>
+                <p>Le restaurant LGC est une expérience culinaire authentique situé au <em>3 Rue Gaston Lauriau, 93100 Montreuil</em>, où l'art de la cuisine prend vie.</p>
+                <p>Ouvert depuis moins d'un an, notre établissement est spécialisé dans le secteur d'activités de la restauration et formation cuisinier. </p>
+                <p>Notre restaurant vous offre une sélection de plats, cuisine du monde et européenne. Chaque plat est préparé avec des ingrédients frais et des épices spécialement importées pour garantir une véritable authenticité.</p>
+            </div>
+            <figure>
+                <img src="./asset/emily-powers-9xWl_zhIcS4-unsplash.jpg" alt="">
+            </figure>
+        </section>  
+        <section class="deuxieme">
+            <figure>
+                <img src="./asset/jc-gellidon-80GJUuOhXgA-unsplash.jpg" alt="">
+            </figure>
+            <div class="description-apropos">
+                <h2>Le chef</h2>
+                <p>Découvrez l'âme "<em>Du bon goût</em>" Derrière chaque plat savoureux se cache la passion de notre chef, un véritable artisan de la cuisine rapide. Fort de son expérience et de sa créativité, il sélectionne avec soin les meilleurs ingrédients pour vous offrir une explosion de saveurs. Chaque bouchée est un voyage gustatif à travers les différentes régions d'Europe.</p>
+                <p>Le Bon Goût, c'est aussi une équipe passionnée par la cuisine. Sous la direction de notre chef, nos cuisiniers mettent tout en œuvre pour vous offrir une expérience gustative unique. Ensemble, ils créent des plats qui éveillent vos papilles et vous font voyager.</p>
+            </div>
+        </section>
+        <section class="troisieme-section">
+            <p>Le Bont Gout, la saveure du fast food!</p>
+            <div class="btn-apropos">
+                <button onclick="redirectionNotreCarte()">Notre Carte</button>
+                <button onclick="redirectionReserver()">Réserver une table</button>
+            </div>
+        </section>       
+    </main>
+    <footer>
+        <figure>
+
+            <figcaption>
+                <p>&copy; Restaurant LGC - Tous droits réservés - 2025</p>
+            </figcaption>
+        </figure>
+    </footer>
+    <script src="./pages.js"></script>
+    <script src="apropos.js"></script>
+</body>
+</html>

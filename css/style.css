@@ -1,0 +1,536 @@
+@import url(./reset.css);
+
+:root{
+    --orange-color: #AE1B00;
+    --yellow-color: #F8B60E;
+    --white-color: #FFFFFF;
+    --black-color: #272627;;
+}
+/*Style du body pour éviter le scroll quand le burger menu est ouvert*/
+body.no-scroll {
+    overflow: hidden;
+  }
+/*Header*/
+header{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+header figcaption{
+    position: absolute;
+    width: 200px;
+    top: -14px;
+    left: 5%;
+}
+header figcaption img{
+    width: 100%;
+}
+header nav{
+    position: absolute;
+    right: 5%;
+}
+header nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+header nav ul li a{
+    font-weight: 600;
+    font-size: 1.6rem;
+    transition: ease-in-out .3s ;
+}
+header nav ul li a:hover{
+    color: var(--orange-color);
+    transition: ease-in-out .3s ;
+}
+
+header nav ul li a::after{
+    position: relative;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: var(--orange-color);
+    transform: scale(0);
+    transition: transform .3s ease-in-out;
+}
+
+header nav ul li a:hover::after{
+    transform: scale(1);
+}
+header nav ul .separateur{
+    width: 1px;
+    height: 15px;
+    background-color: var(--black-color);
+}
+header nav .btn-command{
+    border: #DCDCDC solid 1px;
+    background-color: var(--yellow-color);
+    padding: 15px 30px;
+    border-radius: 5px;
+    font: 1.5rem 'Montserrat', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    display: none;
+}
+header nav ul a.active{
+    color: var(--orange-color);
+}
+/*Burger Menu*/
+.burger-menu{
+    position: absolute;
+    right: 5%;
+    display: none;
+    cursor: pointer;
+}
+.burger-menu .bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    border-radius: 20px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--orange-color);
+}
+
+/*Slider*/
+.carousel{
+    width: 1100px;
+    max-width: 100vw;
+    height: 500px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+.list{
+    position: relative;
+    margin: auto;
+    height: 100%;
+    width: min(1200px, 90vw);
+}
+.item{
+    position: absolute;
+    inset: 0;
+}
+figure img{
+    width: 1100px;
+    max-width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
+.content{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+.content .text{
+    width: 120px;
+    border: solid 1px var(--white-color);
+    border-radius: 20px;
+    transform: rotate(-15deg);
+}
+.content p{
+    font-family: 'Pecita', sans-serif;
+    font-size: 5rem;
+    color: var(--white-color);
+    text-align: center;
+}
+.content h2{
+    font-family: "Kavoon", serif;
+    font-size: 4rem;
+    text-align: center;
+    color: var(--white-color);
+}
+.buttons{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.buttons button{
+    border: none;
+    color: var(--yellow-color);
+    background-color: transparent;
+    font-size: 3rem;
+    font-weight: 900;
+    font-family: 'Pecita', sans-serif;
+    cursor: pointer;
+    transition: ease-in-out .3s;
+}
+.buttons button:hover{
+    color: var(--yellow-color);
+    transition: ease-in-out .3s;
+}
+.dots{
+    position: absolute;
+    bottom: 10px;
+    color: var(--yellow-color);
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.dots li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: var(--yellow-color);
+    margin: 20px;
+    border-radius: 20px;
+    transition: 1s;
+    cursor: pointer;
+}
+.dots li.active{
+    width: 30px;
+}
+.item .commander{
+    position: absolute;
+    width: 240px;
+    height: 160px;
+    background-color: #F2F2F2;
+    border: #DCDCDC solid 1px;
+    top: 40%;
+    right: 15%;
+    border-radius: 5px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+.item .commander .btn-command{
+    border: #DCDCDC solid 1px;
+    background-color: var(--white-color);
+    padding: 15px 30px;
+    border-radius: 5px;
+    font: 1.5rem 'Montserrat', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
+/* animation*/
+.carousel{
+    --calculation: 1;
+}
+.carousel .item{
+    transition: .5s;
+    transform: translateX(calc(100vw * var(--calculation)));
+    opacity: 0;
+    transition-delay: .3s;
+}
+.content h2,
+.content p{
+    transition: .7s;
+    transform: translateX(calc(200px * var(--calculation)));
+    opacity: 0;
+    transition-delay: 0.3s;
+}
+.content h2{
+    transition-delay: 0.5s;
+}
+.content p{
+    transition-delay: 0.7s;
+}
+.list .active{
+    opacity: 1;
+    transform: translateX(0);
+}
+.content h2,
+.content p{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/*Section 2*/
+.second-section{
+    width: 90%;
+    margin: 60px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.second-section .description{
+    width: 40%;
+}
+.second-section .description h3{
+    font-family: 'Pecita', sans-serif;
+    font-size: 3rem;
+}
+.second-section .description p{
+    margin-top: 20px;
+    line-height: 3rem;
+    font-size: 1.5rem;
+    text-align: justify;
+}
+.second-section .description button{
+    margin-top: 20px;
+    padding: 15px 40px;
+    background-color: var(--orange-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    font: 1.5rem 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: ease-in-out .3s ;
+}
+.second-section .description button:hover{
+    background-color: var(--yellow-color);
+    color: var(--black-color);
+    transition: ease-in-out .3s ;
+}
+.second-section figure{
+    width: 500px;
+}
+.second-section figure img{
+    width: 100%;
+    border-radius: 20px;
+    border: 5px solid transparent;
+    box-shadow: 5px -5px 0 0 var(--orange-color);
+    transition: .3s ease-in-out;
+}
+
+.second-section figure img:hover{
+    transform: scale(1.1);
+    transition: .3s ease-in-out;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+}
+
+/*Section qui parle ramene vers les bon plans*/
+.section-bonPlan{
+    height: 300px;
+    background-color: #DCDCDC;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.section-bonPlan .message{
+    background-color: #00508A;
+    padding: 40px;
+    border-radius: 5px;
+    border: solid 1px #1967D2;
+}
+.section-bonPlan .message h4{
+    text-align: center;
+    color: var(--white-color);
+    font-size: 2rem;
+}
+.section-bonPlan .message p{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 700;
+    color: var(--white-color);
+    line-height: 3rem;
+}
+.section-bonPlan figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: var(--white-color);
+}
+.section-bonPlan figure img{
+    width: 300px;
+    height: 200%;
+}
+.section-bonPlan figure p{
+    font-family: "Kavoon", serif;
+    font-weight: 300;
+    font-size: 2rem;
+    color: #504F54;
+}
+
+/*Footer*/
+footer{
+    background-color: #F2F2F2;
+    height: 60px;
+    border-top: solid 1px  #DCDCDC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+footer figure p{
+    text-align: center;
+    font-style: italic;
+}
+footer figure img{
+    width: 30px;
+}
+
+/*les mdeias querrys*/
+@media (max-width: 1192px){
+
+}
+
+/*Ecran de moins de 768px*/
+@media screen and (max-width: 768px){
+    .burger-menu{
+        display: block;
+    }
+
+    .burger-menu.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .burger-menu.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .burger-menu.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    nav{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--white-color);
+        left: -100%;
+        top: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        overflow: hidden;
+        z-index: 100;
+        transition: 0.3s;
+    }
+    header nav ul{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        top: 30px;
+        align-items: flex-start;
+    }
+    header nav ul li a{
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: var(--black-color);
+        margin-left: 45px;
+    }
+    header nav ul .separateur,
+    header nav ul .last-separateur{
+        width: 100%;
+        height: 1px;
+        background-color: #DCDCDC;
+    }
+
+    nav.active{
+        left: 0;
+    }
+    header nav .btn-command{
+        position: absolute;
+        bottom: 30%;
+        display: block;
+        width: 70%;
+        font-size: 1.8rem;
+        padding: 25px 10px;
+    }
+    /*Première section*/
+    .carousel{
+        width: 100%;
+        height: 450px;
+        border-radius: 0;
+    }
+    .buttons{
+        top: 35%;
+    }
+    .buttons button{
+        color: var(--yellow-color);
+        font-size: 2.5rem;
+    }
+    .carousel figure img{
+        width: 100%;
+        height: 300px;
+        border-radius: 10px;
+    }
+    .content .text{
+        width: 60px;
+    }
+    .content .text p{
+        font-size: 3rem;
+    }
+    .item .commander{
+        height: 120px;
+        top: 68%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .content h2{
+        font-size: 2rem
+    }
+    
+    /*Section 2*/
+    .second-section{
+        flex-direction: column;
+        width: 90%;
+        margin: 10px 5px;
+    }
+    .second-section .description{
+        width: 90%;
+    }
+    .second-section .description h3{
+        font-size: 3rem;
+    }
+    .second-section figure{
+        width: 300px;
+    }
+    /*Section qui parle ramene vers les bon plans*/
+    .section-bonPlan{
+        height: 520px;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .section-bonPlan figure img{
+        width: 300px;
+        height: 200px;
+    }
+    .section-bonPlan .message p{
+        font-size: 1.7rem;
+    }
+    .section-bonPlan .message{
+        width: 80%;
+    }
+    
+    footer p{
+        font-size: 1.2rem;
+    }
+    
+}
+/*plus petits ecrans*/
+@media screen and (max-width: 400px){
+
+    header nav .btn-command{
+        margin-top: 70%;
+    }
+}

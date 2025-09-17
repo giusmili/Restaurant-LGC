@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/android-chrome-512x512.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="stylesheet" href="./css/burger.css">
+    <title>Nos desserts</title>
+</head>
+<body>
+    <header>
+            <figure class="logo">
+                <figcaption>
+                     <a href="./index.html"><img src="./asset/logo_lgc.png" alt="La grande classe"></a>
+                </figcaption>
+            </figure>
+            <nav>
+                <ul>
+                    <li><a href="./index.html" class="nav-link">Accueil</a></li>
+                    <li class="separateur"></li>
+                    <li><a href="./menu.html" class="nav-link active">Menu</a></li>
+                    <li class="separateur"></li>
+                    <li><a href="./reservation.html" class="nav-link">Reservation</a></li>
+                    <li class="separateur"></li>
+                    <li><a href="./galerie.html" class="nav-link">Galerie</a></li>
+                    <li class="separateur"></li>
+                    <li><a href="./apropos.html" class="nav-link">A propos</a></li>
+                    <li class="separateur"></li>
+                    <li><a href="./contact.html" class="nav-link">Contact</a></li>
+                    <li class="last-separateur"></li>
+                </ul>
+                <button class="btn-command">Commander</button>
+            </nav>
+            <div class="burger-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+    </header>
+    <!--Mon main -->
+    <main>
+           <section class="premiere-section">
+                <aside>
+                    <a href="./menu.html"><h2><img src="./asset/carte.png" alt="icone de carte">Notre carte</h2></a>
+                    <nav class="aside-nav">
+                        <ul>
+                            <li><a href="./burger.html"><img src="./asset/icone-burger.png" alt="Icone burger"> Nos burgers</a></li>
+                            <li><a href="./menuEnfant.html"><img src="./asset/icone-meuenfant.png" alt="Icone Menu enfant"> Menus enfant</a></li>
+                            <li><a href="./bonPlans.html"><img src="./asset/icone-bonplans.png" alt="Icone bons Plans"> Nos bons plans</a></li>
+                            <li><a href="./pizza.html"><img src="./asset/icone-pizza.png" alt="Icone Pizza"> Nos pizzas</a></li>
+                            <li><a href="./sandwich.html"><img src="./asset/icon-sandwich.png" alt="Icone Sandwich"> Nos sandwichs</a></li>
+                            <li><a href="./salade.html"><img src="./asset/icone-salade.png" alt="Icone salade"> Nos salades</a></li>
+                            <li><a href="./boisson.html"><img src="./asset/icone-boisson.png" alt="Icone boissons">Nos boissons</a></li>
+                            <li><a href="./chicken.html"><img src="./asset/icone-snack-bar.png" alt="Icone snack">Chicken Tasty</a></li>
+                            <li><a href="./dessert.html" class="active"><img src="./asset/icone-dessert.png" alt="Icone dessert">Nos desserts</a></li>
+                        </ul>
+                    </nav>
+                </aside> 
+                <div class="corps-menu">
+                    <div class="description-menu">
+                        <h1>Nos Desserts</h1>
+                        <figure class="image-presentation">
+                            <img src="./asset/dessert.jpg" alt="Image de présentation">
+                        </figure>
+                    </div>
+                    <div class="img-menu">
+                        <figure data-burger-name="Crème Tasty" data-burger-price="7.50" data-burger-image="./asset/dessert1.jpg">
+                            <figcaption>
+                                <p>Crème Tasty <br>7.50€</p>
+                            </figcaption>
+                            <img src="./asset/dessert1.jpg" alt="Image burger Tasty">
+                        </figure>
+                        <figure data-burger-name="Hyper Tasty" data-burger-price="9" data-burger-image="./asset/dessert2.jpg">
+                            <figcaption>
+                                <p>Hyper Tasty<br>9€</p>
+                            </figcaption>
+                            <img src="./asset/dessert2.jpg" alt="Donnut burger">
+                        </figure>
+                        <figure data-burger-name="Tasty donuts" data-burger-price="10" data-burger-image="./asset/dessert3.webp">
+                            <figcaption>
+                                <p>Tasty donuts<br>10€</p>
+                            </figcaption>
+                            <img src="./asset/dessert3.webp" alt="Image burger végétal">
+                        </figure>
+                        <figure data-burger-name="Tasty chausson" data-burger-price="5.30" data-burger-image="./asset/dessert4.webp">
+                            <figcaption>
+                                <p>Tasty chausson<br>5.30€</p>
+                            </figcaption>
+                            <img src="./asset/dessert4.webp" alt="Image classique">
+                        </figure>
+                        <figure data-burger-name="Coca-cola" data-burger-price="8" data-burger-image="./asset/dessert5.webp">
+                            <figcaption>
+                                <p>Frozen Coca-cola<br>8€</p>
+                            </figcaption>
+                            <img src="./asset/dessert5.webp" alt="Image Cheddar-Bacon-Caramélisé">
+                        </figure>
+                        <figure data-burger-name="Tasty ice-cream" data-burger-price="5.30" data-burger-image="./asset/dessert6.webp">
+                            <figcaption>
+                                <p>Tasty ice-cream<br>5.30€</p>
+                            </figcaption>
+                            <img src="./asset/dessert6.webp" alt="Image Le régional">
+                        </figure>
+                    </div>
+                    <div id="popupAjoutPanier" class="hidden">
+                        <h4>Le Bon Gout</h4>
+                        <p id="popup-content"></p>
+                        <img id="popup-image" src="" alt="image produit">
+                        <span class="close"><ion-icon name="close-outline" alt="Image du produit"></ion-icon></span>
+                        <button>Ajouter au panier</button> 
+                    </div>
+                    <div class="section-menu-burger">
+                        <h2>Restaurant LGC</h2>
+                        <p>Merci pour votre visite!</p>
+                    </div>
+                </div>                
+            </section>
+            <!-- Section aside pour les mobile qui vient apès la section plat du jour -->
+            <section class="nav-aside-mobile">
+                <div class="aside-mobile" role="navigation">
+                    <a href="./menu.html"><h3><img src="./asset/icone-carte-rouge.png" alt="icone Carte"> Notre carte</h3></a>
+                    <ul>
+                        <li class="separateur"></li>
+                        <li><a href="./burger.html"><img src="./asset/icone-burger-rouge.png" alt="Icone burger"> Nos burgers</a></li>
+                        <li class="separateur"></li>
+                        <li><a href="./bonPlans.html"><img src="./asset/icone-bonplans-rouge.png" alt="Icone Bons plans">Nos bons plans</a></li>
+                        <li class="separateur"></li>
+                        <li><a href="./pizza.html"><img src="./asset/icone-pizza-rouge.png" alt="Icone pizza">Nos pizzas</a></li>
+                        <li class="separateur"></li>
+                        <li><a href="./sandwich.html"><img src="./asset/icone-sandwich-rouge.png" alt="Icone sandwich">Nos Sandwichs</a></li>
+                        <li class="separateur"></li>
+                        <li><a href="./menuEnfant.html"><img src="./asset/icone-menuenfant-rouge.png" alt="Icone Menu enfant">Menus enfant</a></li>
+                        <li class="separateur"></li>
+                        <li><a href="./salade.html"><img src="./asset/icone-salades-rouge.png" alt="Icone salades">Nos salades</a></li>
+                        <li class="separateur"></li>
+                        <li><a href="./boisson.html"><img src="./asset/icone-boisson-rouge.png" alt="Icone boissons">Nos boissons</a></li>
+                        <li class="separateur"></li>
+                        <li><a href="#"><img src="./asset/icone-snack-rouge.png" alt="Icone Snack">Snacks</a></li>
+                        <li class="separateur"></li>
+                        <li><a href="./dessert.html"><img src="./asset/icone-dessert-rouge.png" alt="Icone dessert">Nos desserts</a></li>
+                    </ul>
+                </div>
+            </section> 
+    </main>
+    <footer>
+        <figure>
+
+            <figcaption>
+                <p>&copy; Restaurant LGC - Tous droits réservés - 2025</p>
+            </figcaption>
+        </figure>
+    </footer>
+    <script src="./pages.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./ajoutPanier.js"></script>
+</body>
+</html>

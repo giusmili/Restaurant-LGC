@@ -1,0 +1,303 @@
+@import url(./menu.css);
+
+/*Icon cart header et panneau carte*/
+header .icon-cart{
+    position: relative;
+    margin-right: 20px;
+}
+header svg{
+    width: 30px;
+    height: 30px;
+}
+header .icon-cart span{
+    display: flex;
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--white-color);
+    position: absolute;
+    top: 50%;
+    right: -2px;
+    font-size: 1rem;
+}
+
+.cartTab{
+    width: 400px;
+    background-color: #504F54;
+    color: var(--white-color);
+    position: fixed;
+    top: 0;
+    right: 0;
+    inset: 0 -400px 0 auto;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    transition: .5s;
+}
+body.showCart .cartTab{
+    inset: 0 0 0 auto;
+}
+
+.cartTab h3{
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+}
+.cartTab .btn{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.cartTab .btn button{
+    background-color: var(--yellow-color);
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+.cartTab .btn .close-btn{
+    background-color: #DCDCDC;
+}
+.cartTab .listCart .items img{
+    width: 80%;
+}
+.cartTab .listCart .items{
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 5px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.cartTab .listCart .quantity span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: var(--white-color);
+    color: #504F54;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.cartTab .listCart .quantity span:nth-child(2){
+    background-color: transparent;
+    color: #eee;
+}
+.cartTab .listCart .quantity span:nth-child(even){
+    background-color: #eee1;
+}
+.cartTab .listCart{
+    overflow: auto;
+}
+.cartTab .listCart::-webkit-scrollbar{
+    width: 0;
+}
+/*Les produits*/
+.listProduct .items img{
+    width: 130px;
+    height: 130px;
+    filter: drop-shadow(0 50px 20px #0002);
+}
+.listProduct{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.listProduct .items{
+    text-align: center;
+    background-color: #eeeee6;
+    padding: 20px;
+    border-radius: 20px;
+}
+.listProduct .items h3{
+    font-weight: 500;
+    font-size: large;
+}
+.listProduct .items .price{
+    letter-spacing: 7px;
+    font-weight: 500;
+}
+.listProduct .items button{
+    padding: 10px 20px;
+    background-color: #F2F2F2;
+    border: #DCDCDC solid 1px;
+    border-radius: 5px;
+    font: 1.5rem 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+/*Fonction active lorqu'on clique sur un menu*/
+aside .aside-nav ul a.active{
+    background-color: #a01900;
+    color: var(--yellow-color);
+}
+.premiere-section aside{
+    width: 20%;
+}
+.image-presentation img{
+    width: 880px;
+    height: 300px;
+    border-radius: 20px;
+}
+.img-menu{
+    justify-content: center;
+    grid-template-columns: 30% 30% 30%;
+    gap: 0;
+}
+.img-menu figure{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 170px;
+}
+.img-menu figure figcaption p{
+    font-family: "Kavoon", serif;
+    font-weight: 200;
+}
+.img-menu figure img{
+    width: 80%;
+    height: 80%;
+    transition: .3s ease-in-out;
+}
+.img-menu figure img:hover{
+    transform: scale(1.1) ;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+.section-menu-burger{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.section-menu-burger h2{
+    font-family: 'Pecita', sans-serif;
+    font-size: 3rem;
+}
+/*Popup pour l'Ajout au panier*/
+#popupAjoutPanier.hidden {
+    display: none;
+}
+#popupAjoutPanier h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--orange-color);
+    margin-bottom: 10px;
+    color: var(--white-color);
+}
+
+#popupAjoutPanier p{
+    font-family: "Kavoon", serif;
+    font-size: 2.6rem;
+    text-align: center;
+    color: var(--white-color);
+}
+
+#popupAjoutPanier {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 75%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(89, 88, 88, 0.661);
+    backdrop-filter: blur(13px);
+    border-radius: 20px;
+    padding: 20px;
+}
+#popupAjoutPanier img{
+    width: 200px;
+}
+#popupAjoutPanier button{
+    margin-top: 20px;
+    padding: 15px 40px;
+    background-color: var(--orange-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    font: 1.5rem 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: ease-in-out .3s ;
+}
+.close {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: var(--orange-color);
+}
+
+
+/*Ecran de moins de 768px*/
+@media screen and (max-width: 768px){
+    /*Icon cart header*/
+    header .icon-cart{
+        margin-right: 70px;
+    }
+    .cartTab{
+        width: 100%;
+        right: -500px;
+    }
+    .cartTab .listCart .items{
+        grid-template-columns: 70px 100px 50px 1fr;
+    }
+    /*Image des produit*/
+    .img-menu{
+        margin: 20px auto;
+        grid-template-columns: 45% 45%;
+        gap: 10px;
+        justify-content: flex-start;
+    }
+    .img-menu figure{
+        width: 120px;
+        height: 120px;
+    }
+    .img-menu figure img{
+        width: 90px;
+        height: 80px;
+    }
+    .img-menu figure figcaption p{
+        font-size: 1.3rem;
+    }
+    .image-presentation img{
+        width: 310px;
+        height: 250px;
+    }
+    .section-menu-burger{
+        display: none;
+    }
+    .listProduct{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .listProduct .items img{
+        width: 70px;
+        height: 70px;
+        filter: drop-shadow(0 50px 20px #0002);
+    }
+    /*Popup pour l'Ajout au panier*/
+    #popupAjoutPanier{
+        width: 100%;
+        height: 100%;
+        gap: 20px;
+    }
+    #popupAjoutPanier img{
+        width: 250px;
+    }
+    .close{
+        right: 10%;
+        top: 5%;
+        font-size: 3.5rem;
+    }
+      
+}

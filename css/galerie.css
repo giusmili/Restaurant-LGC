@@ -1,0 +1,123 @@
+@import url(style.css);
+/*Section presentation*/
+.presentation{
+    text-align: center;
+    background-image: linear-gradient(to right,#DCDCDC, #78777E,  #78777E, #DCDCDC);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.presentation h1{
+    color: var(--white-color);
+    font-size: 3.5rem;
+    letter-spacing: 1.5rem;
+}
+.presentation p{
+    color: var(--white-color);
+    font-weight: 600;
+}
+
+/*Section galerie*/
+.galery-container{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+    width: 94%;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+    margin: 10px auto;
+}
+.galery-item{
+    width: calc(100% / 3 );
+
+    opacity: 0.85;
+    cursor: pointer;
+    transition: ease-in-out .3s;
+}
+.galery-item:hover{
+    opacity: 1;
+    transition: ease-in-out .3s;
+}
+.galery-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*Lightbox */
+.lightbox{
+    position: fixed;
+    display: none;
+    background-color: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    top: 0;
+    left: 0;
+}
+.lightbox-content{
+    position: relative;
+    width: 65%;
+    height: 58%;
+    margin: 5% auto;
+    margin-top: 120px;
+}
+.lightbox-content img{
+    width: 100%;
+    height: 100%;
+    border: 6px solid #fff;
+    object-fit: cover;
+}
+.lightbox-prev,
+.lightbox-next{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffff;
+    padding: 15px;
+    top: 45%;
+    cursor: pointer;
+}
+.lightbox-prev{
+    left: 0;
+}
+.lightbox-prev::after{
+    content: "<";
+    font-family: 'Pecita', sans-serif;
+    font-size: 2.5rem;
+}
+.lightbox-next::after{
+    content: ">";
+    font-family: 'Pecita', sans-serif;
+    font-size: 2.5rem;
+}
+.lightbox-next{
+    right: -12px;
+}
+
+
+/*Ecran de moins de 768px*/
+@media screen and (max-width: 768px){
+    .galery-container{
+        width: 90%;
+    }
+    .galery-item{
+        flex-basis: 49.80%;
+        margin: 10px auto;
+    }
+    
+    .lightbox-content{
+        width: 90%;
+        height: 50%;
+        margin: 15% auto;
+        margin-top: 230px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .galery-item{
+        flex-basis: 90%;
+        margin-bottom: 1px;
+    }
+}

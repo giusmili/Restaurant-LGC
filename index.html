@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/android-chrome-512x512.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Le bon gout</title>
+</head>
+<body>
+    <header>
+            <figure class="logo">
+                <figcaption>
+                    <a href="./index.html"><img src="./asset/logo_lgc.png" alt="La grande classe"></a>
+                </figcaption>
+            </figure>
+            <nav>
+                <ul>
+                    <li><a href="./index.html" class="nav-link active">Accueil</a></li>
+                    <li class="separateur"></li>
+                    <li><a href="./menu.html" class="nav-link">Menu</a></li>
+                    <li class="separateur"></li>
+                    <li><a href="./reservation.html" class="nav-link">Reservation</a></li>
+                    <li class="separateur"></li>
+                    <li><a href="./galerie.html" class="nav-link">Galerie</a></li>
+                    <li class="separateur"></li>
+                    <li><a href="./apropos.html" class="nav-link">A propos</a></li>
+                    <li class="separateur"></li>
+                    <li><a href="./contact.html" class="nav-link">Contact</a></li>
+                    <li class="last-separateur"></li>
+                </ul>
+                <button class="btn-command" onclick="redirectionNotreCarte()">Commander</button>
+            </nav>
+            <div class="burger-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+    </header>
+    <!--Mon main -->
+    <main>
+        <section>
+            <div class="carousel">
+                <div class="list">
+                    <div class="item active">
+                        <figure>
+                            <img src="./asset/burger-accueil.jpg" alt="">
+                        </figure>
+                        <div class="content">
+                            <h2>Burger Tasty</h2>
+                            <div class="text">
+                                <p>6€</p>
+                            </div>
+                        </div>
+                        <!--Element commander-->
+                        <div class="commander">
+                            <p>Envie d'un burger savoureux à prix Tasty?</p>
+                            <button class="btn-command" onclick="redirectionNotreCarte()">Commander</button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <figure>
+                            <img src="./asset/burger-7419428_1280.jpg" alt="">
+                        </figure>
+                        <div class="content">
+                            <h2>Menu Big <br>Tasty</h2>
+                        </div>
+                        <div class="commander">
+                            <p>Offrez vous un menu 100% fait maison!</p>
+                            <button class="btn-command" onclick="redirectionNotreCarte()">Commander</button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <figure>
+                            <img src="./asset/pizza.jpg" alt="">
+                        </figure>
+                        <div class="content">
+                            <h2>Margherita <br>Tasty</h2>
+                        </div>
+                        <div class="commander">
+                            <p>Découvrez notre Margherita Tasty!</p>
+                            <button class="btn-command" onclick="redirectionNotreCarte()">Commander</button>
+                        </div>
+                    </div>
+                </div>
+                <!--Bulles d'indications-->
+                <ul class="dots">
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <!--Boutton prev et next-->
+            <div class="buttons">
+                <button id="prev">&lt;</button>
+                <button id="next">&gt;</button>
+            </div>
+            </div>
+        </section>
+        <section class="second-section">
+            <div class="description">
+                <h3>Le gout du bonheur !</h3>
+                <p>Le Bon Gout est une véritable odyssée culinaire, proposant une sélection de plats issus de différentes régions européennes. Chaque plat est préparé avec des épices spécialement importées pour garantir l'authenticité.  
+                </p>
+                <p>Des burgers juteux, des frites croustillantes, une expérience unique.  Envie d'un repas rapide et savoureux ? Nos chefs vous concoctent des plats fait maison, à déguster sur place ou à emporter. Bienvenue dans notre univers gourmand.</p>
+                <button onclick="redirectionEnSsavoirPlus()">En savoir plus</button>
+            </div>
+            <figure>
+                <img src="asset/frankie-lopez-_j4S4V2C8ew-unsplash.jpg" alt="">
+            </figure>
+        </section>
+        <!-- Section qui parle ramene vers les bon plans -->
+        <section class="section-bonPlan">
+            <div class="message">
+                <h4>Envie de bien manger ?</h4>
+                <p>Nous vous proposons des formules pas cher <br>à prix tasty mais qui vous charge à bloc ! </p>
+            </div>
+            <figure>
+                <a href="./bonPlans.html"><img src="./asset/bonplan-accueil.jpg" alt=""></a>
+                <p>Nos bons plans</p>
+            </figure>
+        </section>
+    </main>
+    <footer>
+        <figure>
+           
+            <figcaption>
+                <p>&copy; Restaurant LGC - Tous droits réservés - 2025</p>
+            </figcaption>
+        </figure>
+    </footer>
+    <script src="./app.js"></script>
+</body>
+</html>

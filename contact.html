@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/android-chrome-512x512.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="stylesheet" href="./css/contact.css">
+    <title>La grande classe - le restaurant</title>
+</head>
+<body>
+    <header>
+            <figure class="logo">
+                <figcaption>
+                     <a href="./index.html"><img src="./asset/logo_lgc.png" alt="La grande classe"></a>
+                </figcaption>
+            </figure>
+            <nav>
+                <ul>
+                    <li><a href="./index.html" class="nav-link">Accueil</a></li>
+                    <li class="separateur"></li>
+                    <li><a href="./menu.html" class="nav-link">Menu</a></li>
+                    <li class="separateur"></li>
+                    <li><a href="./reservation.html" class="nav-link">Reservation</a></li>
+                    <li class="separateur"></li>
+                    <li><a href="./galerie.html" class="nav-link">Galerie</a></li>
+                    <li class="separateur"></li>
+                    <li><a href="./apropos.html" class="nav-link">A propos</a></li>
+                    <li class="separateur"></li>
+                    <li><a href="./contact.html" class="nav-link active">Contact</a></li>
+                    <li class="last-separateur"></li>
+                </ul>
+                <button class="btn-command">Commander</button>
+            </nav>
+            <div class="burger-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+    </header>
+    <!--Mon main -->
+    <main>
+        <section class="section-img">   
+        </section>
+        <section class="image-contact"></section>
+         <section class="section-contact">
+            <h1>Nous contacter!</h1>
+            <p>Vous avez une question sur notre carte, une suggestion pour améliorer nos produits ou simplement envie de nous faire part de votre expérience ? N'hésitez pas à nous contacter, nous sommes à votre écoute.</p>
+            <h2>Restaurant LGC</h2>
+            <div class="adress">
+                <figure>
+                    <a href="https://www.facebook.com/romarissamba" target="_blank">
+                        <img src="./asset/adresse.png" alt="contact par facebook">
+                    </a>
+                    <p>3 Rue Gaston Lauriau, 93100 Montreuil<br>01 41 50 41 05<br></p>
+                </figure>
+            </div>
+            <div class="contact-icones">
+                <p>Suivez nous sur nos reseaux!</p>
+                <div class="icone-reseaux">
+                    <figure>
+                        <a href="https://www.facebook.com/romarissamba" target="_blank">
+                            <img src="./asset/facebook.png" alt="contact par facebook">
+                        </a>
+                    </figure>
+                    <figure>
+                        <a href="https://www.facebook.com/romarissamba" target="_blank">
+                            <img src="./asset/instagram.png" alt="contact par instagram">
+                        </a>
+                    </figure>
+                    <figure>
+                        <a href="https://www.facebook.com/romarissamba" target="_blank">
+                            <img src="./asset/twitter.png" alt="contact par X">
+                        </a>
+                    </figure>
+                    <figure>
+                        <a href="https://www.facebook.com/romarissamba" target="_blank">
+                            <img src="./asset/linkedin.png" alt="contact Linkedin">
+                        </a>
+                    </figure>
+                </div>
+                </div>
+        </section> 
+        <section class="troisieme-section">
+            <h3>Horaires</h3>
+            <div class="separateur"></div>
+            <figure>
+                <img src="./asset/icone-temps.png" alt="icone Horaires">
+            </figure>
+            <div class="horaires">
+                <div class="jours">
+                    <h4>Lundi</h4>
+                    <p><img src="./asset/icone-cadenas-verrouille.png" alt="Icone cadéna"> Fermé</p>
+                </div>
+                <div class="jours">
+                    <h4>Mardi</h4>
+                    <p>9H00 - 23H00</p>
+                </div>
+                <div class="jours">
+                    <h4>Mer - Jeu</h4>
+                    <p>9H00 - 22H30</p>
+                </div>
+                <div class="jours">
+                    <h4>Ven - Sam</h4>
+                    <p>12H00 - 23H30</p>
+                </div>
+              
+            </div>
+            <button onclick="redirectionReserver()">Réserver une table</button>
+        </section>     
+    </main>
+    <footer>
+        <figure>
+        
+            <figcaption>
+                <p>&copy; Restaurant LGC - Tous droits réservés - 2025</p>
+            </figcaption>
+        </figure>
+    </footer>
+    <script src="./pages.js"></script>
+</body>
+</html>

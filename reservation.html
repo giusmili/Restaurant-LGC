@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/android-chrome-512x512.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="stylesheet" href="./css/reservation.css">
+    <title>Le bon gout</title>
+</head>
+<body>
+    <header>
+            <figure class="logo">
+                <figcaption>
+                     <a href="./index.html"><img src="./asset/logo_lgc.png" alt="La grande classe"></a>
+                </figcaption>
+            </figure>
+            <nav>
+                <ul>
+                    <li><a href="./index.html" class="nav-link">Accueil</a></li>
+                    <li class="separateur"></li>
+                    <li><a href="./menu.html" class="nav-link">Menu</a></li>
+                    <li class="separateur"></li>
+                    <li><a href="./reservation.html" class="nav-link active">Reservation</a></li>
+                    <li class="separateur"></li>
+                    <li><a href="./galerie.html" class="nav-link">Galerie</a></li>
+                    <li class="separateur"></li>
+                    <li><a href="./apropos.html" class="nav-link">A propos</a></li>
+                    <li class="separateur"></li>
+                    <li><a href="./contact.html" class="nav-link">Contact</a></li>
+                    <li class="last-separateur"></li>
+                </ul>
+                <button class="btn-command">Commander</button>
+            </nav>
+            <div class="burger-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+    </header>
+    <!--Mon main -->
+    <main>
+        <section class="section-reservation">
+            <div class="intro">
+                <h1>LE BON GOUT</h1>
+                <p>Réservez une table dans notre restaurant</p>
+            </div>  
+            <div class="reservation">
+                <div class="form-reservation">
+                    <h2>Faites votre réservation</h2>
+                    <form action="#" method="post">
+                        <div class="input-box">
+                     
+                            <input type="name" required>
+                            <label for="name">Votre nom</label>
+                        </div>
+                        <div class="input-box">
+                     
+                            <input type="number" min="1" max="10" oninput="this.value = Math.min(Math.max(this.value, 1), 10);"required>
+                            <label for="number">Couverts</label>
+                        </div>
+                        <div class="input-box">
+                            
+                            <input type="datetime-local" id="myDate" name="datetime" required>
+                    
+                        </div>
+                        <div class="input-box">
+                           
+                            <input type="email" required>
+                            <label for="email">Mail</label>
+                        </div>
+                        <button type="submit" class="btn-submit">Réserver</button>
+                    </form>
+                </div>
+            </div>      
+        </section>
+        <section class="section-info">
+            <h3>Le restaurant LGC</h3>
+            <p>Nous sommes ouvert tous les mardi entre 9H00 et 23H00, les mercredi et jeudi entre 9H00 et 22H30, les vendredi et samedi entre 12H00 et 23H30, les dimanches entre 12H00 - 19H30 et enfin les lundi, nous sommes fermés. Profitéez de notre burger Tasty à prix tasty 4 euros chaque vendredi et samedi entre 18 H et 21H. Vous ne pouvez réserver au dela de 10 personnes par table.
+            <br>Les réservations se font uniquement sur notre site &#x1F609;. <br>Merci et à bientôt.<br>Vous pouvez également réserver par téléphone. Cliquez sur le button ci-dessous pour voir notre numéro de téléphone!</p>
+            <button id="myButton" aria-label="event"><img src="./asset/appel-telephonique.png" alt=""></button>
+            <div id="popup" class="hidden">
+                <p>+33 05 21 25 32</p>
+                <span class="close"><ion-icon name="close-outline"></ion-icon></span> 
+            </div>
+        </section>
+    </main>
+    <footer>
+        <figure>
+           
+            <figcaption>
+                <p>&copy; Restaurant LGC &nbsp;&nbsp;&nbsp; - Tous droits réservés - 2025</p>
+            </figcaption>
+        </figure>
+    </footer>
+    <script src="./pages.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./reservation.js"></script>
+</body>
+</html>
