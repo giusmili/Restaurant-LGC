@@ -14,7 +14,7 @@
     font-family: 'Pecita', sans-serif;
     font-size: 2.5rem;
     font-weight: 400;
-    background-color: #a01900;
+    background-color: #F7132A;
     color: var(--white-color);
     margin-bottom: 10px;
     text-align: center;
@@ -49,7 +49,7 @@ aside .aside-nav ul li img{
 aside .aside-nav ul a:hover{
     color: var(--yellow-color);
     transition: ease-in-out .3s ;
-    background-color: #a01900;
+    background-color: #F7132A;
 }
 
 .description-menu h1{

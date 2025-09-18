@@ -1,8 +1,8 @@
 @import url(./reset.css);
 
 :root{
-    --orange-color: #AE1B00;
-    --yellow-color: #F8B60E;
+    --orange-color: #4740F9;
+    --yellow-color: #f7efdd;
     --white-color: #FFFFFF;
     --black-color: #272627;;
 }
@@ -364,6 +364,7 @@ figure img{
     font-weight: 300;
     font-size: 2rem;
     color: #fff;
+    text-shadow: 0 0 1rem #222;
 }
 
 /*Footer*/

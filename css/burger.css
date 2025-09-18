@@ -127,7 +127,7 @@ body.showCart .cartTab{
 }
 /*Fonction active lorqu'on clique sur un menu*/
 aside .aside-nav ul a.active{
-    background-color: #a01900;
+    background-color: #F7132A;
     color: var(--yellow-color);
 }
 .premiere-section aside{
