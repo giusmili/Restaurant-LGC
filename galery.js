@@ -1,66 +1,63 @@
-const galeryitem = document.getElementsByClassName('galery-item');
+// Sélection des éléments
+const galleryItems = document.querySelectorAll('.galery-item');
+
+// Création des éléments du lightbox
 const lightBoxContainer = document.createElement('div');
 const lightBoxContent = document.createElement('div');
 const lightBoxImg = document.createElement('img');
 const lightBoxPrev = document.createElement('div');
 const lightBoxNext = document.createElement('div');
 
-//ClassList
-
+// Ajout des classes
 lightBoxContainer.classList.add('lightbox');
 lightBoxContent.classList.add('lightbox-content');
 lightBoxPrev.classList.add('fa', 'angle-left', 'lightbox-prev');
 lightBoxNext.classList.add('fa', 'angle-right', 'lightbox-next');
 
-lightBoxContainer.appendChild(lightBoxContent);
-lightBoxContent.appendChild(lightBoxImg);
-lightBoxContent.appendChild(lightBoxPrev);
-lightBoxContent.appendChild(lightBoxNext);
-document.body.appendChild(lightBoxContainer);
+// Construction de la structure DOM
+lightBoxContent.append(lightBoxImg, lightBoxPrev, lightBoxNext);
+lightBoxContainer.append(lightBoxContent);
+document.body.append(lightBoxContainer);
 
 let index = 1;
 
-function showLightBox(n){
-    if (n > galeryitem.length){
-        index = 1;
-    }else if(n < 1) {
-        index = galeryitem.length;
-    }
+// Affichage d'une image
+const showLightBox = (n) => {
+  if (n > galleryItems.length) {
+    index = 1;
+  } else if (n < 1) {
+    index = galleryItems.length;
+  }
 
-    let imageLocation = galeryitem[index-1].children[0].getAttribute("src");
-    lightBoxImg.setAttribute("src", imageLocation);
-}
+  const imageLocation = galleryItems[index - 1].querySelector('img').getAttribute('src');
+  lightBoxImg.setAttribute('src', imageLocation);
+};
 
-function currentImage(){
-    lightBoxContainer.style.display = "block";
+// Ouvrir l’image cliquée
+const currentImage = (e) => {
+  lightBoxContainer.style.display = 'block';
+  const imageIndex = parseInt(e.currentTarget.getAttribute('data-index'), 10);
+  showLightBox(index = imageIndex);
+};
 
-    let imageIndex = parseInt(this.getAttribute("data-index"));
-    showLightBox(index = imageIndex);
-}
+// Ajouter les events sur toutes les images
+galleryItems.forEach(item => {
+  item.addEventListener('click', currentImage);
+});
 
-for (let i = 0; i<galeryitem.length; i++){
-    galeryitem[i].addEventListener('click', currentImage);
-}
-
-function sliderImage(n){
-    showLightBox(index += n);
-}
-function prevImage(){
-    sliderImage(-1);
-}
-function nextImage(){
-    sliderImage(1);
-}
+// Navigation
+const sliderImage = (n) => showLightBox(index += n);
+const prevImage = () => sliderImage(-1);
+const nextImage = () => sliderImage(1);
 
 lightBoxPrev.addEventListener('click', prevImage);
 lightBoxNext.addEventListener('click', nextImage);
 
-//Close lightbox
-
-function closeLightBox(){
-    if(this === event.target){
-        lightBoxContainer.style.display = "none";
-    }
-}
+// Fermer le lightbox si clic à l’extérieur du contenu
+const closeLightBox = (e) => {
+  if (e.target === lightBoxContainer) {
+    lightBoxContainer.style.display = 'none';
+  }
+};
 
 lightBoxContainer.addEventListener('click', closeLightBox);
