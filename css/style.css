@@ -9,6 +9,9 @@
 /*Style du body pour éviter le scroll quand le burger menu est ouvert*/
 body.no-scroll {
     overflow: hidden;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100svh;
   }
 /*Header*/
 header{
@@ -360,7 +363,7 @@ figure img{
     font-family: "Kavoon", serif;
     font-weight: 300;
     font-size: 2rem;
-    color: #504F54;
+    color: #fff;
 }
 
 /*Footer*/
