@@ -1,200 +1,202 @@
 @import url(./style.css);
 
-.section-reservation .intro{
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.section-reservation .intro {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.section-reservation .intro h1{
-    color: var(--white-color);
-    font-size: 4rem;
-    font-weight: 700;
+.section-reservation .intro h1 {
+  color: var(--white-color);
+  font-size: 4rem;
+  font-weight: 700;
 }
-.section-reservation .intro p{
-    color: var(--white-color);
-    font-size: 2rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    text-align: center;
+.section-reservation .intro p {
+  color: var(--white-color);
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
 }
-.section-reservation{
-    height: 80vh;
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    background-image: url(../asset/reservation-image.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+.section-reservation {
+  height: 80vh;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../asset/reservation-image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
-.reservation{
-    position: relative;
-    width: 370px;
-    height: 390px;
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, .5);
-    border-radius: 20px;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.reservation {
+  position: relative;
+  width: 370px;
+  height: 390px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.3); /* fallback translucide */
+  -webkit-backdrop-filter: blur(20px); /* Safari */
+  backdrop-filter: blur(20px); /* Autres navigateurs compatibles */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.reservation .form-reservation{
-    width: 100%;
-    padding: 40px;
+.reservation .form-reservation {
+  width: 100%;
+  padding: 40px;
 }
-.form-reservation h2{
-    font-size: 2rem;
-    text-align: center;
-    color: var(--white-color);
+.form-reservation h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--white-color);
 }
-.input-box{
-    position: relative;
-    width: 100%;
-    height: 50px;
-    border-bottom: 1px solid var(--white-color);
-    margin: 15px 0;
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid var(--white-color);
+  margin: 15px 0;
 }
-.input-box label{
-    position: absolute;
-    top: 40%;
-    transform: translateY(-50%);
-    font-size: 1.3rem;
-    color: var(--white-color);
-    font-weight: 400;
-    pointer-events: none;
-    transition: .5s;
+.input-box label {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  font-size: 1.3rem;
+  color: var(--white-color);
+  font-weight: 400;
+  pointer-events: none;
+  transition: 0.5s;
 }
-.input-box input:focus~label,
-.input-box input:valid~label{
-    top: -2px
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -2px;
 }
-.input-box input{
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 1.5rem;
-    color: var(--white-color);
-    font-weight: 600;
-    padding: 0 35px 0 5px;
-    text-transform: capitalize;
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  color: var(--white-color);
+  font-weight: 600;
+  padding: 0 35px 0 5px;
+  text-transform: capitalize;
 }
-.input-box .icon{
-    position: absolute;
-    right: 15px;
-    font-size: 1.7rem;
-    color: var(--white-color);
-    line-height: 50px;
+.input-box .icon {
+  position: absolute;
+  right: 15px;
+  font-size: 1.7rem;
+  color: var(--white-color);
+  line-height: 50px;
 }
 .input-box input[type="datetime-local"] {
-    font-size: 1.5rem;
-    color: var(--white-color);
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-  }
-  .input-box input[type="datetime-local"]::-webkit-calendar-picker-indicator {
-    position: absolute;
-    right: 8px;
-    font-size: 3rem;
-    cursor: pointer;
-    opacity: 0;
+  font-size: 1.5rem;
+  color: var(--white-color);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+.input-box input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  right: 8px;
+  font-size: 3rem;
+  cursor: pointer;
+  opacity: 0;
 }
 
-.btn-submit{
-    width: 100%;
-    height: 45px;
-    background: var(--white-color);
-    border: none;
-    outline: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1.7rem;
-    font-weight: 600;
-    margin-top: 10px;
+.btn-submit {
+  width: 100%;
+  height: 45px;
+  background: var(--white-color);
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-top: 10px;
 }
-/*Deuxiemesection*/ 
-.section-info{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    margin: 30px auto;
+/*Deuxiemesection*/
+.section-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 30px auto;
 }
-.section-info h3{
-    font-family: 'Pecita', sans-serif;
-    font-size: 3rem;
-    margin-bottom: 10px;
+.section-info h3 {
+  font-family: "Pecita", sans-serif;
+  font-size: 3rem;
+  margin-bottom: 10px;
 }
-.section-info p{
-    line-height: 3.5rem;
-    text-align: justify;
+.section-info p {
+  line-height: 3.5rem;
+  text-align: justify;
 }
-.section-info button{
-    background-color: var(--orange-color);
-    padding: 10px 50px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    display: block;
+.section-info button {
+  background-color: var(--orange-color);
+  padding: 10px 50px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
 }
 
-.section-info button img{
-    width: 30px;
+.section-info button img {
+  width: 30px;
 }
 /*message popup pour le numéro de gtéléphone*/
 .hidden {
-    display: none;
+  display: none;
 }
-#popup p{
-    font-size: 2.6rem;
-    font-weight: 600;
-    color: var(--white-color);
+#popup p {
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: var(--white-color);
 }
 
 .section-info #popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #1E1F20;
-    border: #DCDCDC solid 1px;
-    border-radius: 10px;
-    padding: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1e1f20;
+  border: #dcdcdc solid 1px;
+  border-radius: 10px;
+  padding: 20px;
 }
 .section-info .close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    cursor: pointer;
-    border-bottom-left-radius: 15px;
-    font-size: 2rem;
-    background-color: var(--orange-color);
-    color: var(--white-color);
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  border-bottom-left-radius: 15px;
+  font-size: 2rem;
+  background-color: var(--orange-color);
+  color: var(--white-color);
 }
 
 /*Ecran de moins de 768px*/
-@media screen and (max-width: 768px){
-    .section-reservation{
-        flex-direction: column;
-    }
-    .section-info{
-        width: 90%;
-    }
-    .section-reservation .intro{
-        width: 90%;
-    }
-    .input-box input[type="datetime-local"]::-webkit-calendar-picker-indicator {
-        width: 50px;
-        right: 8px;
-    }
-    #popup p{
-        font-size: 1.8rem;
-    }
+@media screen and (max-width: 768px) {
+  .section-reservation {
+    flex-direction: column;
+  }
+  .section-info {
+    width: 90%;
+  }
+  .section-reservation .intro {
+    width: 90%;
+  }
+  .input-box input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    width: 50px;
+    right: 8px;
+  }
+  #popup p {
+    font-size: 1.8rem;
+  }
 }

@@ -138,18 +138,20 @@ aside .aside-nav ul a.active{
     height: 300px;
     border-radius: 20px;
 }
-.img-menu{
-    justify-content: center;
-    grid-template-columns: 30% 30% 30%;
-    gap: 0;
+.img-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Colonnes adaptatives */
+    gap: 20px;
+    justify-content: center; /* Centre les colonnes dans le conteneur */
+    justify-items: center;   /* Centre chaque carte dans sa colonne */
+    margin: 0 auto;          /* Centre la grille dans la page */
+    max-width: 900px;        /* Largeur max pour éviter qu’elles partent trop à gauche */
 }
-.img-menu figure{
+.img-menu figure {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 170px;
-    height: 170px;
+    justify-content: center;
 }
 .img-menu figure figcaption p{
     font-family: "Kavoon", serif;
@@ -238,7 +240,6 @@ aside .aside-nav ul a.active{
     color: var(--orange-color);
 }
 
-
 /*Ecran de moins de 768px*/
 @media screen and (max-width: 768px){
     /*Icon cart header*/
@@ -247,22 +248,22 @@ aside .aside-nav ul a.active{
     }
     .cartTab{
         width: 100%;
-        right: -500px;
+        right: -5000px;
+        
     }
     .cartTab .listCart .items{
         grid-template-columns: 70px 100px 50px 1fr;
     }
     /*Image des produit*/
-    .img-menu{
-        margin: 20px auto;
-        grid-template-columns: 45% 45%;
-        gap: 10px;
-        justify-content: flex-start;
-    }
-    .img-menu figure{
-        width: 120px;
-        height: 120px;
-    }
+.img-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Colonnes adaptatives */
+    justify-content: center; /* Centre les colonnes dans le conteneur */
+    justify-items: center;   /* Centre chaque carte dans sa colonne */
+       /* Largeur max pour éviter qu’elles partent trop à gauche */
+    
+}
+
     .img-menu figure img{
         width: 90px;
         height: 80px;
@@ -299,5 +300,44 @@ aside .aside-nav ul a.active{
         top: 5%;
         font-size: 3.5rem;
     }
-      
+}
+
+@media screen and (max-width: 360px){
+    body{
+        margin: 1%;
+    }
+   .section-menu-burger h2{
+       font-size: 2.5rem;
+   }
+   .img-menu {
+   
+}
+   .img-menu figure img{
+       width: 80px;
+       height: 70px;
+   }
+   .img-menu figure figcaption p{
+       font-size: 1.1rem;
+   }
+   .image-presentation img{
+    display: block;
+       width: 100%;
+       height: 200px;
+   }
+
+}
+@media screen and (orientation: landscape) and (max-width: 768px) {
+  .img-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Colonnes adaptatives */
+    gap: 20px;
+    justify-content: center; /* Centre les colonnes dans le conteneur */
+    justify-items: center;   /* Centre chaque carte dans sa colonne */
+    margin: 0 auto;          /* Centre la grille dans la page */
+    max-width: 900px;  
+  }
+  .image-presentation img {
+  width: 880px;
+  
+}
 }

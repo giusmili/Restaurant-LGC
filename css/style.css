@@ -208,7 +208,7 @@ figure img{
     position: absolute;
     width: 240px;
     height: 160px;
-    background-color: #F2F2F2;
+    background-color: rgba(242, 242, 242, 0.8);
     border: #DCDCDC solid 1px;
     top: 40%;
     right: 15%;
