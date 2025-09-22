@@ -497,8 +497,8 @@ footer figure img{
     /*Section 2*/
     .second-section{
         flex-direction: column;
-        width: 90%;
-        margin: 10px 5px;
+        
+        margin: 10px auto;
     }
     .second-section .description{
         width: 90%;
@@ -536,5 +536,10 @@ footer figure img{
 
     header nav .btn-command{
         margin-top: 70%;
+    }
+    .second-section .description button{
+        
+       display: block;
+         margin: 10px auto 0;
     }
 }

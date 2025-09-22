@@ -1,342 +1,365 @@
 @import url(./style.css);
 
 /*Aside*/
-.premiere-section{
-    display: flex;
+.premiere-section {
+  display: flex;
 }
-.premiere-section aside{
-    width: 30%;
-    background-color: var(--orange-color);
-
-}
-
-.premiere-section aside h2{
-    font-family: 'Pecita', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 400;
-    background-color: #F7132A;
-    color: var(--white-color);
-    margin-bottom: 10px;
-    text-align: center;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.premiere-section aside h2 img{
-    width: 30px;
-    padding-right: 5px;
+.premiere-section aside {
+  width: 30%;
+  background-color: var(--orange-color);
 }
 
-.premiere-section aside .aside-nav ul{
-    display: flex;
-    flex-direction: column;
+.premiere-section aside h2 {
+  font-family: "Pecita", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  background-color: #f7132a;
+  color: var(--white-color);
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-aside .aside-nav ul a{
-    display: block;
-    padding: 15px;
-    color: var(--white-color);
-    transition: ease-in-out .3s ;
-    font-weight: 600;
-}
-aside .aside-nav ul li{
-    margin-bottom: 10px;
-}
-aside .aside-nav ul li img{
-    width: 30px;
-    padding-right: 10px;
-}
-aside .aside-nav ul a:hover{
-    color: var(--yellow-color);
-    transition: ease-in-out .3s ;
-    background-color: #F7132A;
+.premiere-section aside h2 img {
+  width: 30px;
+  padding-right: 5px;
 }
 
-.description-menu h1{
-    font-family: "Montserrat", sans-serif;
-    font-size: 3rem;
-    letter-spacing: 1rem;
+.premiere-section aside .aside-nav ul {
+  display: flex;
+  flex-direction: column;
 }
-.corps-menu{
-    margin-left: 10%;
+aside .aside-nav ul a {
+  display: block;
+  padding: 15px;
+  color: var(--white-color);
+  transition: ease-in-out 0.3s;
+  font-weight: 600;
 }
-.img-menu{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+aside .aside-nav ul li {
+  margin-bottom: 10px;
 }
-.img-menu figure{
-    width: 200px;
-    height: 200px;
-    margin-top: 25px;
-    padding: 25px 20px;
-    background-color: #edededee;
-    border-radius: 10px;
+aside .aside-nav ul li img {
+  width: 30px;
+  padding-right: 10px;
 }
-.img-menu figure h3{
-    font-family: "Kavoon", serif;
-    font-weight: 300;
-    font-size: 2rem;
-    color: #504F54;
+aside .aside-nav ul a:hover {
+  color: var(--yellow-color);
+  transition: ease-in-out 0.3s;
+  background-color: #f7132a;
 }
-.img-menu figure p{
-    text-align: center;
+
+.description-menu h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  letter-spacing: 1rem;
 }
-.img-menu figure img{
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    transition: .3s ease-in-out;
+.corps-menu {
+  margin-left: 10%;
 }
-.img-menu figure img:hover{
-    transform: scale(1.05) ;
-    transition: .3s ease-in-out;
+.img-menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.img-menu figure {
+  width: 200px;
+  height: 200px;
+  margin-top: 25px;
+  padding: 25px 20px;
+  background-color: #edededee;
+  border-radius: 10px;
+}
+.img-menu figure h3 {
+  font-family: "Kavoon", serif;
+  font-weight: 300;
+  font-size: 2rem;
+  color: #504f54;
+}
+.img-menu figure p {
+  text-align: center;
+}
+.img-menu figure img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  transition: 0.3s ease-in-out;
+}
+.img-menu figure img:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out;
 }
 
 /*Deuxième section*/
-.section-plat{
-    margin-top: 50px;
-    margin-bottom: 30px;
-    display: flex;
-    gap: 50px;
+.section-plat {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 50px;
 }
-.section-plat figure{
-    width: 500px;
-    height: 300px;
+.section-plat figure {
+  width: 500px;
+  height: 300px;
 }
-.section-plat figure img{
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    border: 5px solid transparent;
-    box-shadow: 5px -5px 0 0 var(--orange-color);
+.section-plat figure img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  border: 5px solid transparent;
+  box-shadow: 5px -5px 0 0 var(--orange-color);
 }
-.description-plat{
-    width: 30%;
+.description-plat {
+  width: 30%;
 }
-.description-plat h2{
-    font-family: 'Pecita', sans-serif;
-    font-size: 3.5rem;
+.description-plat h2 {
+  font-family: "Pecita", sans-serif;
+  font-size: 3.5rem;
 }
 /*L'aside pour les mobiles*/
-.nav-aside-mobile{
-    display: none;
+.nav-aside-mobile {
+  display: none;
 }
 
 /*section Avis*/
-.container{
-    position: relative;
-    width: 400px;
-    background-color: #111;
-    padding: 20px 30px;
-    border: 1px solid #444;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin: 20px auto;
+.container {
+  position: relative;
+  width: 400px;
+  background-color: #111;
+  padding: 20px 30px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px auto;
 }
-.container h3{
-    color: var(--white-color);
-    font-size: 1.2rem;
+.container h3 {
+  color: var(--white-color);
+  font-size: 1.2rem;
 }
-.container .post{
-    display: none;
-    text-align: center;
-    margin-top: 10px;
+.container .post {
+  display: none;
+  text-align: center;
+  margin-top: 10px;
 }
-.container .text{
-    font-size: 1.9rem;
-    color: #666;
-    font-weight: 500;
+.container .text {
+  font-size: 1.9rem;
+  color: #666;
+  font-weight: 500;
 }
-.container .edit{
-    position: absolute;
-    font-size: 1.4rem;
-    right: 10px;
-    top: 5px;
-    cursor: pointer;
-    color: #666;
-    font-weight: 500;
+.container .edit {
+  position: absolute;
+  font-size: 1.4rem;
+  right: 10px;
+  top: 5px;
+  cursor: pointer;
+  color: #666;
+  font-weight: 500;
 }
-.container .edit:hover{
-    text-decoration: underline;
+.container .edit:hover {
+  text-decoration: underline;
 }
-.container .star-widget input{
-    display: none;
+.container .star-widget input {
+  display: none;
 }
-.star-widget label{
-    font-size: 40px;
-    color: #444;
-    padding: 10px;
-    float: right;
-    transition: all 0.2s ease;
+.star-widget label {
+  font-size: 40px;
+  color: #444;
+  padding: 10px;
+  float: right;
+  transition: all 0.2s ease;
 }
 input:not(:checked) ~ label:hover,
-input:not(:checked) ~ label:hover ~ label{
-    color: var(--yellow-color);
+input:not(:checked) ~ label:hover ~ label {
+  color: var(--yellow-color);
 }
-input:checked ~ label{
-    color: var(--yellow-color);
+input:checked ~ label {
+  color: var(--yellow-color);
 }
-input#rate-5:checked ~ label{
-    color: var(--yellow-color);
-    color: #fe7;
-    text-shadow: 0 0 20px #952;
+input#rate-5:checked ~ label {
+  color: var(--yellow-color);
+  color: #fe7;
+  text-shadow: 0 0 20px #952;
 }
 
-form header{
-    width: 100%;
-    font-size: 1.9rem;
-    color: var(--yellow-color);
-    font-weight: 500;
-    margin: 5px 0 20px 0;
-    text-align: center;
-    transition: all 0.2s ease;
+form header {
+  width: 100%;
+  font-size: 1.9rem;
+  color: var(--yellow-color);
+  font-weight: 500;
+  margin: 5px 0 20px 0;
+  text-align: center;
+  transition: all 0.2s ease;
 }
-#rate-1:checked ~ form header:before{
-    content: "Je n'aime pas du tout! \01F620";
+#rate-1:checked ~ form header:before {
+  content: "Je n'aime pas du tout! \01F620";
 }
-#rate-2:checked ~ form header:before{
-    content: "Je n'aime pas ! \01F612";
+#rate-2:checked ~ form header:before {
+  content: "Je n'aime pas ! \01F612";
 }
-#rate-3:checked ~ form header:before{
-    content: "J'aime bien ! \01F60A";
+#rate-3:checked ~ form header:before {
+  content: "J'aime bien ! \01F60A";
 }
-#rate-4:checked ~ form header:before{
-    content: "J'aime beaucoup ! \01F60E";
+#rate-4:checked ~ form header:before {
+  content: "J'aime beaucoup ! \01F60E";
 }
-#rate-5:checked ~ form header:before{
-    content: "J'adore ! \01F60D";
+#rate-5:checked ~ form header:before {
+  content: "J'adore ! \01F60D";
 }
-.container form{
-    display: none;
+.container form {
+  display: none;
 }
-input:checked ~ form{
-    display: block;
+input:checked ~ form {
+  display: block;
 }
-form .textarea{
-    height: 100px;
-    width: 100%;
-    overflow: hidden;
+form .textarea {
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
 }
-form .textarea textarea{
-    height: 100%;
-    width: 100%;
-    outline: none;
-    color: var(--white-color);
-    border: 1px solid #333;
-    background: #222;
-    padding: 10px;
-    font-size: 17px;
-    resize: none;
+form .textarea textarea {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color: var(--white-color);
+  border: 1px solid #333;
+  background: #222;
+  padding: 10px;
+  font-size: 17px;
+  resize: none;
 }
-form .btn{
-    height: 45px;
-    width: 100%;
-    margin: 15px 0;
+form .btn {
+  height: 45px;
+  width: 100%;
+  margin: 15px 0;
 }
-form .btn button{
-    height: 100%;
-    width: 100%;
-    border: 1px solid #444;
-    outline: none;
-    background: #222;
-    color: #999;
-    font-size: 17px;
-    font-weight: 500;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all .3s ease-in-out;
+form .btn button {
+  height: 100%;
+  width: 100%;
+  border: 1px solid #444;
+  outline: none;
+  background: #222;
+  color: #999;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
-form .btn button:hover{
-    background: #1b1b1b;
-    transition: all .3s ease-in-out;
+form .btn button:hover {
+  background: #1b1b1b;
+  transition: all 0.3s ease-in-out;
 }
 
 /*Ecran de moins de 768px*/
-@media screen and (max-width: 768px){
-    .premiere-section aside{
-        display: none;
-        
-    }
-    .corps-menu{
-        margin-top: 5%;
-        width: 100%;
-        margin-left: 25px;
-    }
-    .img-menu{
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .img-menu figure{
-        width: 125px;
-        height: 130px;
-        margin-top: 10px;
-    }
-    .img-menu figure img{
-        width: 90%;
-        height: 90%;
-    }
-    .section-plat{
-        flex-direction: column;
-    }
-    .section-plat figure{
-        width: 300px;
-        height: 200px;
-        order: 2;
-    }
-    .description-plat{
-        width: 100%;
-    }
-    /*section Avis*/
-    .container{
-        width: 300px;
-        margin-left: 0;
-    }
-    .star-widget label{
-        width: 30px;
-    }
-    
-    /*L'aside pour les mobiles*/
-    .nav-aside-mobile{
-        width: 80%;
-        padding: 10%;
-        display: block;
-        background-color: #DCDCDC;
-    }
-    .nav-aside-mobile .aside-mobile h3{
-        font-family: 'Pecita', sans-serif;
-        font-size: 3rem;
-        color: var(--orange-color);
-    }
-    .nav-aside-mobile .aside-mobile h3 img{
-        width: 30px;
-        padding-right: 10px;
-    }
-    .nav-aside-mobile .aside-mobile ul li{
-        margin-top: 20px; 
-    }
-    .nav-aside-mobile .aside-mobile ul li img{
-        width: 30px;
-        padding-right: 10px;
-    }
-    .nav-aside-mobile .aside-mobile ul li a{
-        color: var(--orange-color);
-    }
-    .nav-aside-mobile .aside-mobile ul .separateur{
-        width: 100%;
-        height: 1px;
-        background-color: var(--orange-color);
-    }
+@media screen and (max-width: 768px) {
+  .premiere-section aside {
+    display: none;
+  }
+  .corps-menu {
+    margin-top: 5%;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .img-menu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .img-menu figure {
+    width: 125px;
+    height: 130px;
+    margin-top: 10px;
+  }
+  .img-menu figure img {
+    width: 90%;
+    height: 90%;
+  }
+ 
+  .section-plat {
+    flex-direction: column;
+  }
+  .section-plat figure {
+    width: 300px;
+    height: 200px;
+    order: 2;
+  }
+  .description-plat {
+    width: 100%;
+  }
+  /*section Avis*/
+  .container {
+    width: 300px;
+    margin-left: 0;
+  }
+  .star-widget label {
+    width: 30px;
+  }
+
+  /*L'aside pour les mobiles*/
+  .nav-aside-mobile {
+    width: 80%;
+    padding: 10%;
+    display: block;
+    background-color: #dcdcdc;
+  }
+  .nav-aside-mobile .aside-mobile h3 {
+    font-family: "Pecita", sans-serif;
+    font-size: 3rem;
+    color: var(--orange-color);
+  }
+  .nav-aside-mobile .aside-mobile h3 img {
+    width: 30px;
+    padding-right: 10px;
+  }
+  .nav-aside-mobile .aside-mobile ul li {
+    margin-top: 20px;
+  }
+  .nav-aside-mobile .aside-mobile ul li img {
+    width: 30px;
+    padding-right: 10px;
+  }
+  .nav-aside-mobile .aside-mobile ul li a {
+    color: var(--orange-color);
+  }
+  .nav-aside-mobile .aside-mobile ul .separateur {
+    width: 100%;
+    height: 1px;
+    background-color: var(--orange-color);
+  }
 }
 
-@media screen and (max-width: 400px){
-     /*section Avis*/
-     .container{
-        width: 250px;
-        margin-left: 0;
+@media screen and (max-width: 400px) {
+  /*section Avis*/
+  .container {
+    width: auto;
+    margin: 1px auto;
+  }
+  .star-widget label {
+    width: 30px;
+  }
+}
+@media screen and (orientation: landscape) and (max-width: 768px) {
+  .img-menu {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 360px) {
+    body{
+        margin: 1%;
     }
-    .star-widget label{
-        width: 30px;
+   .section-plat figure{
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+  }
+    .section-plat figure img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 0;
+    box-shadow: none;
     }
 }
