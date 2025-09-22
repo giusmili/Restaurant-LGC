@@ -3,7 +3,6 @@
 /*Aside*/
 .premiere-section {
   display: flex;
-
 }
 .premiere-section aside {
   width: 30%;
@@ -53,20 +52,16 @@ aside .aside-nav ul a:hover {
 }
 
 .description-menu h1 {
-    padding: 10px;
+  padding: 10px;
   font-family: "Montserrat", sans-serif;
   font-size: 3rem;
   letter-spacing: 1rem;
-
 }
 .corps-menu {
-
-    width: 100%;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-   
-
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 .img-menu {
   display: grid;
@@ -268,70 +263,68 @@ form .btn button:hover {
   .premiere-section aside {
     display: none;
   }
+}
+.img-menu {
+  /*  grid-template-columns: repeat(2, 1fr); */
+}
+.img-menu figure {
+  width: 125px;
+  height: 130px;
+  margin-top: 10px;
+}
+.img-menu figure img {
+  width: 90%;
+  height: 90%;
+}
 
-  }
-  .img-menu {
-   /*  grid-template-columns: repeat(2, 1fr); */
-  }
-  .img-menu figure {
-    width: 125px;
-    height: 130px;
-    margin-top: 10px;
-  }
-  .img-menu figure img {
-    width: 90%;
-    height: 90%;
-  }
- 
-  .section-plat {
-    flex-direction: column;
-  }
-  .section-plat figure {
-    width: 300px;
-    height: 200px;
-    order: 2;
-  }
-  .description-plat {
-    width: 100%;
-  }
-  /*section Avis*/
+.section-plat {
+  flex-direction: column;
+}
+.section-plat figure {
+  width: 300px;
+  height: 200px;
+  order: 2;
+}
+.description-plat {
+  width: 100%;
+}
+/*section Avis*/
 
-  .star-widget label {
-    width: 30px;
-  }
+.star-widget label {
+  width: 30px;
+}
 
-  /*L'aside pour les mobiles*/
-  .nav-aside-mobile {
-    width: 80%;
-    padding: 10%;
-    display: none;
-    background-color: #dcdcdc;
-  }
-  .nav-aside-mobile .aside-mobile h3 {
-    font-family: "Pecita", sans-serif;
-    font-size: 3rem;
-    color: var(--orange-color);
-  }
-  .nav-aside-mobile .aside-mobile h3 img {
-    width: 30px;
-    padding-right: 10px;
-  }
-  .nav-aside-mobile .aside-mobile ul li {
-    margin-top: 20px;
-  }
-  .nav-aside-mobile .aside-mobile ul li img {
-    width: 30px;
-    padding-right: 10px;
-  }
-  .nav-aside-mobile .aside-mobile ul li a {
-    color: var(--orange-color);
-  }
-  .nav-aside-mobile .aside-mobile ul .separateur {
-    width: 100%;
-    height: 1px;
-    background-color: var(--orange-color);
-  }
-
+/*L'aside pour les mobiles*/
+.nav-aside-mobile {
+  width: 80%;
+  padding: 10%;
+  display: none;
+  background-color: #dcdcdc;
+}
+.nav-aside-mobile .aside-mobile h3 {
+  font-family: "Pecita", sans-serif;
+  font-size: 3rem;
+  color: var(--orange-color);
+}
+.nav-aside-mobile .aside-mobile h3 img {
+  width: 30px;
+  padding-right: 10px;
+}
+.nav-aside-mobile .aside-mobile ul li {
+  margin-top: 20px;
+}
+.nav-aside-mobile .aside-mobile ul li img {
+  width: 30px;
+  padding-right: 10px;
+}
+.nav-aside-mobile .aside-mobile ul li a {
+  color: var(--orange-color);
+}
+.nav-aside-mobile .aside-mobile ul .separateur {
+  width: 100%;
+  height: 1px;
+  background-color: var(--orange-color);
+}
 
 @media screen and (max-width: 400px) {
   /*section Avis*/
@@ -350,28 +343,45 @@ form .btn button:hover {
 }
 
 @media screen and (max-width: 360px) {
-    body{
-  /*       margin: 1%; */
-    }
-   .section-plat figure{
+  body {
+          margin: 1%;
+  }
+  .section-plat figure {
     display: block;
     width: 100%;
     height: 100%;
-    
   }
-    .section-plat figure img {
+  .section-plat figure img {
     display: block;
     width: 100%;
     height: 100%;
     border-radius: 8px;
     border: 0;
     box-shadow: none;
-    }
+  }
 }
 @media screen and (max-width: 360px) {
   /*section Avis*/
   .img-menu {
     grid-template-columns: repeat(2, 1fr);
   }
- 
+}
+
+@media screen and (max-width: 428px) {
+  /*section Avis*/
+  .img-menu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .section-plat figure img {
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: 0;
+    box-shadow: none;
+  }
+  .section-plat figure {
+    width: auto;
+  }
 }
