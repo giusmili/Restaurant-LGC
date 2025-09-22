@@ -178,8 +178,7 @@
     .section-contact figure{
         flex-direction: row;
         justify-content: flex-start;
-        gap: 20px;
-        padding-left: 20px;
+     
     }
     .adress{
         justify-content: flex-start;
