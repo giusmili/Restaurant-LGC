@@ -11,6 +11,14 @@ document.addEventListener("DOMContentLoaded", (e) => {
   let prev = document.getElementById("prev");
   let next = document.getElementById("next");
 
+  let btnCard = document.querySelectorAll('.btn-command')[0];
+  console.info(btnCard);
+    //Fonction pour le button Notre Carte qui redirige vers la page menu.html
+    btnCard.addEventListener("click", ()=>{
+      console.info("ok")
+
+  })
+ // console.log(btnCard[0])
   let active = 0;
   let firstPosition = 0;
   let lastPosition = items.length - 1;
@@ -80,8 +88,5 @@ document.addEventListener("DOMContentLoaded", (e) => {
     body.classList.toggle("no-scroll");
   });
 
-  //Fonction pour le button Notre Carte qui redirige vers la page menu.html
-  function redirectionNotreCarte() {
-    window.location.href = "./menu.html";
-  }
+
 });

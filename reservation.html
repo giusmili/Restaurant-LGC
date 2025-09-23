@@ -9,7 +9,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/android-chrome-512x512.png">
     <link rel="manifest" href="favicon/site.webmanifest">
     <link rel="stylesheet" href="./css/reservation.css">
-    <title>Le bon gout</title>
+    <title>Reservation La grande classe</title>
 </head>
 <body>
     <header>
@@ -53,23 +53,23 @@
                     <h2>Faites votre réservation</h2>
                     <form action="#" method="post">
                         <div class="input-box">
-                     
-                            <input type="name" required>
+                            <input type="text" name="name" required id="name">
                             <label for="name">Votre nom</label>
+                           
                         </div>
                         <div class="input-box">
                      
-                            <input type="number" min="1" max="10" oninput="this.value = Math.min(Math.max(this.value, 1), 10);"required>
+                            <input type="number" min="1" max="10" oninput="this.value = Math.min(Math.max(this.value, 1), 10);" required id="number">
                             <label for="number">Couverts</label>
                         </div>
                         <div class="input-box">
-                            
-                            <input type="datetime-local" id="myDate" name="datetime" required>
+                         
+                            <input type="datetime-local" name="datetime" required>
                     
                         </div>
                         <div class="input-box">
                            
-                            <input type="email" required>
+                            <input type="email" required name="email" id="email">
                             <label for="email">Mail</label>
                         </div>
                         <button type="submit" class="btn-submit">Réserver</button>
@@ -96,9 +96,9 @@
             </figcaption>
         </figure>
     </footer>
-    <script src="./pages.js"></script>
+    <script src="./js/pages.js"></script>
+    <script src="./js/reservation.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="./reservation.js"></script>
 </body>
 </html>
