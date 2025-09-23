@@ -530,6 +530,7 @@ footer figure img{
     text-overflow: ellipsis;
     width: 300px;
     white-space: nowrap;
+    }
 }
 /*plus petits ecrans*/
 @media screen and (max-width: 400px){
