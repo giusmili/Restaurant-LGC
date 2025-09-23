@@ -1,15 +1,18 @@
 //fonctionalité Ajout au panier
-let iconCart = document.querySelector('.icon-cart');
-let closeCart = document.querySelector('.close-btn');
-let listProductHTML =document.querySelector('.listProduct');
 
+document.addEventListener('DOMContentLoaded', ()=> {
 
+  const user = {
+    iconCart: document.querySelector(".icon-cart"),
+    closeCart: document.querySelector(".close-btn"),
+    listProductHTML: document.querySelector(".listProduct"),
+  };
 
+  user.iconCart.addEventListener("click", () => {
+    body.classList.toggle("showCart");
+  });
+  user.closeCart.addEventListener("click", () => {
+    body.classList.toggle("showCart");
+  });
 
-iconCart.addEventListener('click', () => {
-  body.classList.toggle('showCart');
 });
-closeCart.addEventListener('click', () => {
-  body.classList.toggle('showCart');
-});
-
