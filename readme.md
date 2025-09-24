@@ -8,11 +8,12 @@ Ouvert depuis moins d'un an, notre établissement est spécialisé dans le secte
 
 Notre restaurant vous offre une sélection de plats, cuisine du monde et européenne. Chaque plat est préparé avec des ingrédients frais et des épices spécialement importées pour garantir une véritable authenticité.
 
+## Répertoire
 ```
 ├── 📁 .git/ 🚫 (auto-hidden)
 ├── 📁 asset/
 │   ├── 📁 galerie/
-│   │   ├── 🖼️ galery14.jpg
+│   │   ├── 🖼️ gakery14.jpg
 │   │   ├── 🖼️ galery1.jpg
 │   │   ├── 🖼️ galery10.jpg
 │   │   ├── 🖼️ galery11.jpg
@@ -194,11 +195,16 @@ Notre restaurant vous offre une sélection de plats, cuisine du monde et europé
 │   ├── 🖼️ favicon-32x32.png
 │   ├── 🖼️ favicon.ico
 │   └── 📄 site.webmanifest
-├── 📄 ajoutPanier.js
-├── 📄 app.js
+├── 📁 js/
+│   ├── 📄 ajoutPanier.js
+│   ├── 📄 app.js
+│   ├── 📄 apropos.js
+│   ├── 📄 avis.js
+│   ├── 📄 galery.js
+│   ├── 📄 pages.js
+│   ├── 📄 panier.js
+│   └── 📄 reservation.js
 ├── 🌐 apropos.html
-├── 📄 apropos.js
-├── 📄 avis.js
 ├── 🌐 boisson.html
 ├── 🌐 bonPlans.html
 ├── 🌐 burger.html
@@ -206,19 +212,13 @@ Notre restaurant vous offre une sélection de plats, cuisine du monde et europé
 ├── 🌐 contact.html
 ├── 🌐 dessert.html
 ├── 🌐 galerie.html
-├── 📄 galery.js
 ├── 🌐 index.html
 ├── 🌐 menu.html
 ├── 🌐 menuEnfant.html
-├── 📄 pages.js
-├── 📄 panier.js
 ├── 🌐 pizza.html
 ├── 📄 products.json
 ├── 📖 readme.md
 ├── 🌐 reservation.html
-├── 📄 reservation.js
 ├── 🌐 salade.html
 └── 🌐 sandwich.html
 ```
-
----
