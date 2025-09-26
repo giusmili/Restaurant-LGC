@@ -1,11 +1,11 @@
 const CACHE_NAME = "restaurant-lgc-v1";
 const URLS_TO_CACHE = [
-  "../Restaurant-LGC/",
-  "../Restaurant-LGC/index.html",
-  "../Restaurant-LGC/menu.html",
-  "../Restaurant-LGC/styles.css",
-  "../Restaurant-LGC/script.js",
-  "../Restaurant-LGC/offline.html"
+  "/Restaurant-LGC/",
+  "/Restaurant-LGC/index.html",
+  "/Restaurant-LGC/menu.html",
+  "/Restaurant-LGC/styles.css",
+  "/Restaurant-LGC/script.js",
+  "/Restaurant-LGC/offline.html"
 ];
 
 self.addEventListener("install", event => {
