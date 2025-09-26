@@ -8,33 +8,23 @@ const URLS_TO_CACHE = [
   "/Restaurant-LGC/offline.html"
 ];
 
-// Installation
 self.addEventListener("install", event => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => cache.addAll(URLS_TO_CACHE))
-  );
-});
-
-// Activation (nettoyage anciens caches)
-self.addEventListener("activate", event => {
-  event.waitUntil(
-    caches.keys().then(keys =>
-      Promise.all(keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k)))
-    )
-  );
-});
-
-// Fetch (mise en cache dynamique)
-self.addEventListener("fetch", event => {
-  event.respondWith(
-    caches.match(event.request).then(response => {
-      return (
-        response ||
-        fetch(event.request).catch(() => caches.match("/Restaurant-LGC/offline.html"))
+    caches.open(CACHE_NAME).then(cache => {
+      return Promise.all(
+        URLS_TO_CACHE.map(url =>
+          fetch(url)
+            .then(resp => {
+              if (!resp.ok) throw new Error(`Échec chargement ${url}`);
+              return cache.put(url, resp);
+            })
+            .catch(err => console.warn("⚠️ Non ajouté au cache :", url, err))
+        )
       );
     })
   );
 });
+
 
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("/Restaurant-LGC/sw.js")
