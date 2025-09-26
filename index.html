@@ -132,6 +132,14 @@
             </figcaption>
         </figure>
     </footer>
+    <script>
+        
+            if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("/Restaurant-LGC/sw.js")
+                .then(() => console.log("Service Worker enregistré !"))
+                .catch(err => console.error("SW échec :", err));
+            }
+    </script>
     <script src="./js/app.js"></script>
     <script src="./js/sw.js"></script>
 </body>
