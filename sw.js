@@ -5,11 +5,10 @@ const URLS_TO_CACHE = [
   "/Restaurant-LGC/menu.html",
   "/Restaurant-LGC/reservation.html",
   "/Restaurant-LGC/styles.css",
-  "/Restaurant-LGC/css/contact.css",
+  "/Restaurant-LGC/contact.css",
   "/Restaurant-LGC/script.js",
   "/Restaurant-LGC/offline.html",
-  "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=android_wifi_3_bar_off",
-  "/Restaurant-LGC/asset/logo_lgc.png",
+  
 ];
 
 // Installation → mise en cache
