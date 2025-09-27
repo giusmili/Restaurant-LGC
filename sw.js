@@ -24,5 +24,8 @@ self.addEventListener("install", event => {
     })
   );
 });
-
-
+  if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("/Restaurant-LGC/sw.js")
+                .then(() => console.log("Service Worker enregistré !"))
+                .catch(err => console.error("SW échec :", err));
+            }
