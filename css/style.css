@@ -390,6 +390,11 @@ footer figure img{
     width: 30px;
 }
 
+/* warning */
+.warining-off-line{
+    color: red;
+}
+
 
 /*Ecran de moins de 768px*/
 @media screen and (max-width: 768px){
