@@ -1,132 +1,117 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/android-chrome-512x512.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/android-chrome-512x512.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
-    <link rel="stylesheet" href="./css/contact.css">
-    <title>La grande classe - le restaurant</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Hors ligne — La Grande Classe</title>
+  <meta name="description" content="Page hors ligne — La Grande Classe. Ressaie quand tu es connecté ou consulte la version en cache.">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent: #053943;
+      --muted: #9aa6b2;
+      --radius: 16px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      background: radial-gradient(1000px 500px at 10% 10%, rgba(124,58,237,0.12), transparent 6%),
+                  radial-gradient(800px 400px at 90% 90%, rgba(6,182,212,0.06), transparent 8%),
+                  var(--bg);
+      color:#e6eef6;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:1rem;
+    }
+
+    main{
+      max-width:480px;
+      width:100%;
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(255,255,255,0.06);
+      border-radius:var(--radius);
+      padding:2rem 1.5rem;
+      backdrop-filter: blur(8px);
+      text-align:center;
+    }
+
+    h1{
+      font-size:1.6rem;
+      margin-bottom:0.5rem;
+      font-weight: lighter;
+    }
+    p{margin-bottom:1rem;color:var(--muted);line-height:1.4}
+
+    .illustration{
+      width:100px;height:100px;margin:1rem auto;display:grid;place-items:center;
+    }
+
+    .btns{display:flex;flex-direction:column;gap:0.8rem;margin-top:1rem}
+    .btn{
+      display:block;
+      padding:0.8rem 1rem;
+      border-radius:12px;
+      font-weight:600;
+      text-decoration:none;
+      transition:0.2s;
+      cursor:pointer;
+    }
+    .btn--primary{
+      background:var(--accent);
+      color:#fff;
+    }
+    .btn--ghost{
+      background:transparent;
+      color:var(--muted);
+      border:1px solid rgba(255,255,255,0.1);
+    }
+
+    footer{margin-top:1.2rem;font-size:0.8rem;color:var(--muted)}
+  </style>
 </head>
 <body>
-    <header>
-            <figure class="logo">
-                <figcaption>
-                     <a href="./index.html"><img src="./asset/logo_lgc.png" alt="La grande classe"></a>
-                </figcaption>
-            </figure>
-            <nav>
-                <ul>
-                    <li><a href="./index.html" class="nav-link">Accueil</a></li>
-                    <li class="separateur"></li>
-                    <li><a href="./menu.html" class="nav-link">Menu</a></li>
-                    <li class="separateur"></li>
-                    <li><a href="./reservation.html" class="nav-link">Reservation</a></li>
-                    <li class="separateur"></li>
-                    <li><a href="./galerie.html" class="nav-link">Galerie</a></li>
-                    <li class="separateur"></li>
-                    <li><a href="./apropos.html" class="nav-link">A propos</a></li>
-                    <li class="separateur"></li>
-                    <li><a href="./contact.html" class="nav-link active">Contact</a></li>
-                    <li class="last-separateur"></li>
-                </ul>
-                <button class="btn-command">Commander</button>
-            </nav>
-            <div class="burger-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-    </header>
-    <!--Mon main -->
-    <main>
-        <section class="section-img">   
-        </section>
-        <section class="image-contact"></section>
-         <section class="section-contact">
-            <h1 class="warining-off-line">
-                <span>
-                    📴
-                </span>
-                Vous êtes hors-ligne : vous pouvez nous contacter!
-            </h1>
-            <p>Vous avez une question sur notre carte, une suggestion pour améliorer nos produits ou simplement envie de nous faire part de votre expérience ? N'hésitez pas à nous contacter, nous sommes à votre écoute.</p>
-            <h2>Restaurant LGC</h2>
-            <div class="adress">
-                <figure>
-                    <a href="https://www.facebook.com/romarissamba" target="blank">
-                        <img src="./asset/adresse.png" alt="contact par facebook">
-                    </a>
-                    <p>3 Rue Gaston Lauriau, 93100 Montreuil<br>01 41 50 41 05<br></p>
-                </figure>
-            </div>
-            <div class="contact-icones">
-                <p>Suivez nous sur nos reseaux!</p>
-                <div class="icone-reseaux">
-                    <figure>
-                        <a href="https://www.facebook.com/romarissamba" target="blank">
-                            <img src="./asset/facebook.png" alt="contact par facebook">
-                        </a>
-                    </figure>
-                    <figure>
-                        <a href="https://www.facebook.com/romarissamba" target="blank">
-                            <img src="./asset/instagram.png" alt="contact par instagram">
-                        </a>
-                    </figure>
-                    <figure>
-                        <a href="https://www.facebook.com/romarissamba" target="blank">
-                            <img src="./asset/twitter.png" alt="contact par X">
-                        </a>
-                    </figure>
-                    <figure>
-                        <a href="https://www.facebook.com/romarissamba" target="blank">
-                            <img src="./asset/linkedin.png" alt="contact Linkedin">
-                        </a>
-                    </figure>
-                </div>
-                </div>
-        </section> 
-        <section class="troisieme-section">
-            <h3>Horaires</h3>
-            <div class="separateur"></div>
-            <figure>
-                <img src="./asset/icone-temps.png" alt="icone Horaires">
-            </figure>
-            <div class="horaires">
-                <div class="jours">
-                    <h4>Lundi</h4>
-                    <p><img src="./asset/icone-cadenas-verrouille.png" alt="Icone cadéna"> Fermé</p>
-                </div>
-                <div class="jours">
-                    <h4>Mardi</h4>
-                    <p>9H00 - 23H00</p>
-                </div>
-                <div class="jours">
-                    <h4>Mer - Jeu</h4>
-                    <p>9H00 - 22H30</p>
-                </div>
-                <div class="jours">
-                    <h4>Ven - Sam</h4>
-                    <p>12H00 - 23H30</p>
-                </div>
-              
-            </div>
-            <button onclick="redirectionReserver()">Réserver une table</button>
-        </section>     
-    </main>
+  <main>
+    <h1>Vous êtes hors ligne</h1>
+    <p>Il semble que vous n’ayez pas de connexion Internet. Pas de panique — certaines fonctionnalités restent disponibles.</p>
+
+    <div class="illustration" aria-hidden="true">
+      <svg width="72" height="72" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-opacity="0.3" stroke-width="1.2"/>
+        <path d="M2 19h20v2H2z" fill="currentColor" fill-opacity="0.04"/>
+        <path d="M7 10l3 3 7-7" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <p>Vous consultez une version en cache. Les actions nécessitant le serveur ne sont pas disponibles.</p>
+
+    <div class="btns">
+      <a class="btn btn--primary" href="#" onclick="location.reload();return false;">Réessayer</a>
+      <!--<button class="btn btn--ghost" onclick="openHelp()">Page d’aide</button>-->
+      <a class="btn btn--ghost" href="/">Retour à l’accueil</a>
+    </div>
+
     <footer>
-        <figure>
-        
-            <figcaption>
-                <p>&copy; Restaurant LGC - Tous droits réservés - 2025</p>
-            </figcaption>
-        </figure>
+      Vérifiez votre connexion Internet ou contactez l’assistance si le problème persiste.
     </footer>
-    <script src="./js/pages.js"></script>
-    <script src="./js/app.js"></script>
-    <script src="./sw.js"></script>
+  </main>
+
+  <script>
+    function openHelp(){
+      if (navigator.onLine) {
+        window.location.href = '/help';
+        return;
+      }
+      caches.match('/help-offline.html').then(function(response){
+        if(response) return response.text().then(html => document.open(), document.write(html), document.close());
+        window.location.href = 'mailto:support@lagueclasse.example?subject=Problème%20connexion';
+      }).catch(function(){
+        window.location.href = 'mailto:support@lagueclasse.example?subject=Problème%20connexion';
+      });
+    }
+  </script>
 </body>
 </html>
