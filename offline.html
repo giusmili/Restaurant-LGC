@@ -101,7 +101,7 @@
         window.location.href = '/help';
         return;
       }
-      caches.match('/help-offline.html').then(function(response){
+      caches.match('/offline.html').then(function(response){
         if(response) return response.text().then(html => document.open(), document.write(html), document.close());
         window.location.href = 'mailto:support@lagueclasse.example?subject=Problème%20connexion';
       }).catch(function(){
