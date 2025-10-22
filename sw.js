@@ -1,14 +1,10 @@
-const CACHE_NAME = "restaurant-lgc-v1";
+const CACHE_NAME = "la-cantine-lgc-v1";
 const URLS_TO_CACHE = [
-  "/Restaurant-LGC/",
-  "/Restaurant-LGC/index.html",
-  "/Restaurant-LGC/menu.html",
-  "/Restaurant-LGC/reservation.html",
-  "/Restaurant-LGC/styles.css",
-  "/Restaurant-LGC/contact.css",
-  "/Restaurant-LGC/script.js",
-  "/Restaurant-LGC/offline.html",
-  
+  "/",
+  "/index.html",
+  "/menu.html",
+  "/reservation.html",
+  "/offline.html",
 ];
 
 // Installation → mise en cache
@@ -37,7 +33,7 @@ self.addEventListener("fetch", (event) => {
     fetch(event.request).catch(() => {
       // Si échec (offline), on sert la page offline.html
       if (event.request.mode === "navigate") {
-        return caches.match("/Restaurant-LGC/offline.html");
+        return caches.match("/offline.html");
       }
       return caches.match(event.request);
     })
@@ -57,9 +53,9 @@ self.addEventListener("activate", (event) => {
   );
 });
 
-if ("serviceWorker" in navigator) {
+if (typeof window !== 'undefined' && "serviceWorker" in navigator) {
   navigator.serviceWorker
-    .register("/Restaurant-LGC/sw.js")
+    .register("/sw.js")
     .then(() => console.log("✅ Service Worker enregistré !"))
     .catch((err) => console.error("❌ SW échec :", err));
 }

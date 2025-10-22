@@ -47,6 +47,11 @@ header nav ul li a{
     font-size: 1.6rem;
     transition: ease-in-out .3s ;
 }
+header nav ul li a:focus-visible{
+    outline: 3px solid var(--orange-color);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
 header nav ul li a:hover{
     color: var(--orange-color);
     transition: ease-in-out .3s ;
@@ -80,6 +85,10 @@ header nav .btn-command{
     font-weight: 500;
     cursor: pointer;
     display: none;
+}
+header nav .btn-command:focus-visible{
+    outline: 3px solid var(--orange-color);
+    outline-offset: 3px;
 }
 header nav ul a.active{
     color: var(--orange-color);
@@ -123,7 +132,7 @@ header nav ul a.active{
     position: absolute;
     inset: 0;
 }
-figure img{
+.carousel figure img{
     width: 1100px;
     max-width: 100vw;
     height: 100%;
@@ -176,6 +185,10 @@ figure img{
     cursor: pointer;
     transition: ease-in-out .3s;
 }
+.buttons button:focus-visible{
+    outline: 3px solid var(--yellow-color);
+    outline-offset: 4px;
+}
 .buttons button:hover{
     color: var(--yellow-color);
     transition: ease-in-out .3s;
@@ -201,12 +214,16 @@ figure img{
     transition: 1s;
     cursor: pointer;
 }
+.dots li:focus-visible{
+    outline: 3px solid var(--yellow-color);
+    outline-offset: 4px;
+}
 .dots li.active{
     width: 30px;
 }
 .item .commander{
     position: absolute;
-    width: 240px;
+    width: 290px;
     height: 160px;
     background-color: rgba(242, 242, 242, 0.8);
     border: #DCDCDC solid 1px;
@@ -241,6 +258,14 @@ figure img{
     transform: translateX(calc(100vw * var(--calculation)));
     opacity: 0;
     transition-delay: .3s;
+}
+@media (prefers-reduced-motion: reduce){
+  .carousel .item,
+  .content h2,
+  .content p,
+  .second-section figure img{
+    transition: none !important;
+  }
 }
 .content h2,
 .content p{
@@ -322,18 +347,22 @@ figure img{
 
 /*Section qui parle ramene vers les bon plans*/
 .section-bonPlan{
-    height: 300px;
+    /* supprimer la hauteur fixe pour éviter les débordements */
     background-color: #DCDCDC;
     display: flex;
     gap: 50px;
     justify-content: center;
     align-items: center;
+    padding: 24px 12px;
+    flex-wrap: wrap;
 }
 .section-bonPlan .message{
     background-color: #00508A;
-    padding: 40px;
+    padding: 28px 32px;
     border-radius: 5px;
     border: solid 1px #1967D2;
+    max-width: 560px;
+    box-sizing: border-box;
 }
 .section-bonPlan .message h4{
     text-align: center;
@@ -353,18 +382,21 @@ figure img{
     align-items: center;
     justify-content: center;
     border-radius: 5px;
-    background-color: var(--white-color);
+    /* background-color: var(--white-color); */
+    width: 300px;
 }
 .section-bonPlan figure img{
-    width: 300px;
-    height: 200%;
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 0 1rem rgb(248, 245, 245));
 }
 .section-bonPlan figure p{
     font-family: "Kavoon", serif;
     font-weight: 300;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #fff;
-    text-shadow: 0 0 1rem #222;
+    text-shadow: 0 0.2rem #6d6c6c;
 }
 
 /*Footer*/
@@ -412,30 +444,32 @@ footer figure img{
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    nav{
-        position: absolute;
+    header nav{
+        position: fixed;
         width: 100%;
-        height: 100vh;
+        height: calc(100vh - 60px);
         background-color: var(--white-color);
         left: -100%;
         top: 60px;
+        right: auto;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-start;
+        align-items: stretch;
         gap: 10px;
         overflow: hidden;
-        z-index: 100;
+        z-index: 1000;
         transition: 0.3s;
+        padding: 16px 16px 24px;
     }
     header nav ul{
         width: 100%;
         display: flex;
         flex-direction: column;
         gap: 20px;
-        position: absolute;
-        top: 30px;
+        position: static;
         align-items: flex-start;
+        margin-top: 12px;
     }
     header nav ul li a{
         font-size: 1.6rem;
@@ -450,16 +484,18 @@ footer figure img{
         background-color: #DCDCDC;
     }
 
-    nav.active{
+    header nav.active{
         left: 0;
     }
     header nav .btn-command{
-        position: absolute;
-        bottom: 30%;
+        position: static;
         display: block;
-        width: 70%;
+        align-self: center;
+        width: calc(100% - 32px);
+        max-width: 420px;
         font-size: 1.8rem;
-        padding: 25px 10px;
+        padding: 16px 12px;
+        margin-top: 24px;
     }
     /*Première section*/
     .carousel{
@@ -512,13 +548,17 @@ footer figure img{
     }
     /*Section qui parle ramene vers les bon plans*/
     .section-bonPlan{
-        height: 520px;
+        /* laisser la hauteur s'adapter au contenu */
+        padding: 20px 0;
         flex-direction: column;
         gap: 30px;
     }
+    .section-bonPlan figure{
+        width: clamp(260px, 80vw, 300px);
+    }
     .section-bonPlan figure img{
-        width: 300px;
-        height: 200px;
+        width: 100%;
+        height: auto;
     }
     .section-bonPlan .message p{
         font-size: 1.7rem;

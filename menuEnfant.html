@@ -1,48 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Menu enfant – des recettes adaptées et savoureuses.">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#4740F9">
+    <meta name="color-scheme" content="light">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Restaurant LGC – Menu enfant">
+    <meta property="og:description" content="Découvrez nos menus enfant.">
+    <meta property="og:url" content="/menuEnfant.html">
+    <meta property="og:image" content="/asset/img-menu-enfant.jpg">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/android-chrome-512x512.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
     <link rel="stylesheet" href="./css/burger.css">
     <title>Menu enfant</title>
 </head>
 <body>
+    <a href="#contenu" class="skip-link">Aller au contenu principal</a>
     <header>
             <figure class="logo">
                 <figcaption>
-                     <a href="./index.html"><img src="./asset/logo_lgc.png" alt="La grande classe"></a> 
+                     <a href="./index.html"><img src="./asset/logo_lgc.png" alt="Logo La cantine LGC"></a> 
                 </figcaption>
             </figure>
-            <nav>
+            <nav id="menu-principal" aria-label="Navigation principale">
                 <ul>
                     <li><a href="./index.html" class="nav-link">Accueil</a></li>
-                    <li class="separateur"></li>
-                    <li><a href="./menu.html" class="nav-link active">Menu</a></li>
-                    <li class="separateur"></li>
+                    <li class="separateur" aria-hidden="true" role="presentation"></li>
+                    <li><a href="./menu.html" class="nav-link active" aria-current="page">Menu</a></li>
+                    <li class="separateur" aria-hidden="true" role="presentation"></li>
                     <li><a href="./reservation.html" class="nav-link">Reservation</a></li>
-                    <li class="separateur"></li>
+                    <li class="separateur" aria-hidden="true" role="presentation"></li>
                     <li><a href="./galerie.html" class="nav-link">Galerie</a></li>
-                    <li class="separateur"></li>
+                    <li class="separateur" aria-hidden="true" role="presentation"></li>
                     <li><a href="./apropos.html" class="nav-link">A propos</a></li>
-                    <li class="separateur"></li>
+                    <li class="separateur" aria-hidden="true" role="presentation"></li>
                     <li><a href="./contact.html" class="nav-link">Contact</a></li>
-                    <li class="last-separateur"></li>
+                    <li class="last-separateur" aria-hidden="true" role="presentation"></li>
                 </ul>
                 <button class="btn-command">Commander</button>
             </nav>
-            <div class="burger-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div class="icon-cart">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+                </svg>
+                <span>0</span>
             </div>
+            <button class="burger-menu" type="button" aria-label="Ouvrir le menu" aria-controls="menu-principal" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
     </header>
     <!--Mon main -->
-    <main>
+    <main id="contenu">
            <section class="premiere-section">
                 <aside>
                     <a href="./menu.html"><h2><img src="./asset/carte.png" alt="icone de carte">Notre carte</h2></a>
@@ -72,57 +88,65 @@
                             <figcaption>
                                 <p>Menu patrouilleur<br>6.50€</p>
                             </figcaption>
-                            <img src="./asset/menuenfant1.jpg" alt="Image burger Tasty">
+                            <img src="./asset/menuenfant1.jpg" alt="Menu patrouilleur" loading="lazy" width="600" height="600">
                         </figure>
                         <figure data-burger-name="Menu Loud" data-burger-price="6" data-burger-image="./asset/menuenfant2.jpg">
                             <figcaption>
                                 <p>Menu Loud<br>6€</p>
                             </figcaption>
-                            <img src="./asset/menuenfant2.jpg" alt="Donnut burger">
+                            <img src="./asset/menuenfant2.jpg" alt="Menu Loud" loading="lazy" width="600" height="600">
                         </figure>
                         <figure data-burger-name="Kinder surprise" data-burger-price="9" data-burger-image="./asset/menuenfant3.jpg">
                             <figcaption>
                                 <p>Kinder surprise<br>9€</p>
                             </figcaption>
-                            <img src="./asset/menuenfant3.jpg" alt="Image burger végétal">
+                            <img src="./asset/menuenfant3.jpg" alt="Kinder surprise" loading="lazy" width="600" height="600">
                         </figure>
                         <figure data-burger-name="Menu Juicy" data-burger-price="8.30" data-burger-image="./asset/menuenfant4.jpg">
                             <figcaption>
                                 <p>Menu Juicy<br>8.50€</p>
                             </figcaption>
-                            <img src="./asset/menuenfant4.jpg" alt="Image classique">
+                            <img src="./asset/menuenfant4.jpg" alt="Menu Juicy" loading="lazy" width="600" height="600">
                         </figure>
                         <figure data-burger-name="Menu complet" data-burger-price="7.90" data-burger-image="./asset/menuenfant5.jpg">
                             <figcaption>
                                 <p>Menu complet<br>7.90€</p>
                             </figcaption>
-                            <img src="./asset/menuenfant5.jpg" alt="Image Cheddar-Bacon-Caramélisé">
+                            <img src="./asset/menuenfant5.jpg" alt="Menu complet" loading="lazy" width="600" height="600">
                         </figure>
                         <figure data-burger-name="Menu classique" data-burger-price="9" data-burger-image="./asset/menuenfant6.jpg">
                             <figcaption>
                                 <p>Menu classique<br>9€</p>
                             </figcaption>
-                            <img src="./asset/menuenfant6.jpg" alt="Image Le régional">
+                            <img src="./asset/menuenfant6.jpg" alt="Menu classique" loading="lazy" width="600" height="600">
                         </figure>
                         <figure data-burger-name="Menu Gourmand" data-burger-price="7.50" data-burger-image="./asset/menuenfant7.jpg">
                             <figcaption>
                                 <p>Menu gourmand<br>7.50€</p>
                             </figcaption>
-                            <img src="./asset/menuenfant7.jpg" alt="Image Le créatif">
+                            <img src="./asset/menuenfant7.jpg" alt="Menu gourmand" loading="lazy" width="600" height="600">
                         </figure>
                         <figure data-burger-name="Menu Bob" data-burger-price="5" data-burger-image="./asset/menuenfant8.jpg">
                             <figcaption>
                                 <p>Menu Bob<br>5€</p>
                             </figcaption>
-                            <img src="./asset/menuenfant8.jpg" alt="Image Le Petit Prince">
+                            <img src="./asset/menuenfant8.jpg" alt="Menu Bob" loading="lazy" width="600" height="600">
                         </figure>
                     </div>
                     <div id="popupAjoutPanier" class="hidden">
-                        <h4>Le Bon Gout</h4>
+                        <h4>La cantine LGC</h4>
                         <p id="popup-content"></p>
                         <img id="popup-image" src="" alt="">
                         <span class="close"><ion-icon name="close-outline" alt="Image du produit"></ion-icon></span>
                         <button type="button">Ajouter au panier</button> 
+                    </div>
+                    <div class="cartTab">
+                        <h3>Votre panier</h3>
+                        <div class="listCart"></div>
+                        <div class="btn">
+                            <button class="close-btn">FERMER</button>
+                            <button class="checkout">VALIDER</button>
+                        </div>
                     </div>
                     <div class="section-menu-burger">
                           <h2>Restaurant LGC</h2>
@@ -165,7 +189,8 @@
             </figcaption>
         </figure>
     </footer>
-    <script src="./pages.js"></script>
+    <script type="module" src="./js/pages/shop.js"></script>
+    <script type="module" src="./js/pages.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="./js/ajoutPanier.js"></script>

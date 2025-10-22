@@ -2,47 +2,57 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="À propos du Restaurant LGC – notre histoire, notre chef et notre philosophie culinaire.">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#4740F9">
+    <meta name="color-scheme" content="light">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Restaurant LGC – À propos">
+    <meta property="og:description" content="Découvrez notre univers, notre chef et notre cuisine maison.">
+    <meta property="og:url" content="/apropos.html">
+    <meta property="og:image" content="/asset/burger-apropos.jpg">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/android-chrome-512x512.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
     <link rel="stylesheet" href="./css/apropos.css">
     <title>A propos</title>
 </head>
 <body>
+    <a href="#contenu" class="skip-link">Aller au contenu principal</a>
     <header>
             <figure class="logo">
                 <figcaption>
-                      <a href="./index.html"><img src="./asset/logo_lgc.png" alt="La grande classe"></a>
+                      <a href="./index.html"><img src="./asset/logo_lgc.png" alt="Logo La cantine LGC"></a>
                 </figcaption>
             </figure>
-            <nav>
+            <nav id="menu-principal" aria-label="Navigation principale">
                 <ul>
                     <li><a href="./index.html" class="nav-link">Accueil</a></li>
-                    <li class="separateur"></li>
+                    <li class="separateur" aria-hidden="true" role="presentation"></li>
                     <li><a href="./menu.html" class="nav-link">Menu</a></li>
-                    <li class="separateur"></li>
+                    <li class="separateur" aria-hidden="true" role="presentation"></li>
                     <li><a href="./reservation.html" class="nav-link">Reservation</a></li>
-                    <li class="separateur"></li>
+                    <li class="separateur" aria-hidden="true" role="presentation"></li>
                     <li><a href="./galerie.html" class="nav-link">Galerie</a></li>
-                    <li class="separateur"></li>
-                    <li><a href="./apropos.html" class="nav-link active">A propos</a></li>
-                    <li class="separateur"></li>
+                    <li class="separateur" aria-hidden="true" role="presentation"></li>
+                    <li><a href="./apropos.html" class="nav-link active" aria-current="page">A propos</a></li>
+                    <li class="separateur" aria-hidden="true" role="presentation"></li>
                     <li><a href="./contact.html" class="nav-link">Contact</a></li>
-                    <li class="last-separateur"></li>
+                    <li class="last-separateur" aria-hidden="true" role="presentation"></li>
                 </ul>
                 <button class="btn-command">Commander</button>
             </nav>
-            <div class="burger-menu">
+            <button class="burger-menu" type="button" aria-label="Ouvrir le menu" aria-controls="menu-principal" aria-expanded="false">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </div>
+            </button>
     </header>
     <!--Mon main -->
-    <main>
+    <main id="contenu">
         <section class="presentation">
             <h1>A PROPOS</h1>
             <p>"Qui sommes-nous ? Une histoire de passion, de saveurs et de partage."</p>
@@ -55,17 +65,17 @@
                 <p>Notre restaurant vous offre une sélection de plats, cuisine du monde et européenne. Chaque plat est préparé avec des ingrédients frais et des épices spécialement importées pour garantir une véritable authenticité.</p>
             </div>
             <figure>
-                <img src="./asset/emily-powers-9xWl_zhIcS4-unsplash.jpg" alt="">
+                <img src="./asset/emily-powers-9xWl_zhIcS4-unsplash.jpg" alt="Salle du restaurant LGC">
             </figure>
         </section>  
         <section class="deuxieme">
             <figure>
-                <img src="./asset/jc-gellidon-80GJUuOhXgA-unsplash.jpg" alt="">
+                <img src="./asset/jc-gellidon-80GJUuOhXgA-unsplash.jpg" alt="Chef en cuisine">
             </figure>
             <div class="description-apropos">
                 <h2>Le chef</h2>
                 <p>Découvrez l'âme "<em>Du bon goût</em>" Derrière chaque plat savoureux se cache la passion de notre chef, un véritable artisan de la cuisine rapide. Fort de son expérience et de sa créativité, il sélectionne avec soin les meilleurs ingrédients pour vous offrir une explosion de saveurs. Chaque bouchée est un voyage gustatif à travers les différentes régions d'Europe.</p>
-                <p>Le Bon Goût, c'est aussi une équipe passionnée par la cuisine. Sous la direction de notre chef, nos cuisiniers mettent tout en œuvre pour vous offrir une expérience gustative unique. Ensemble, ils créent des plats qui éveillent vos papilles et vous font voyager.</p>
+                <p>La cantine LGC, c'est aussi une équipe passionnée par la cuisine. Sous la direction de notre chef, nos cuisiniers mettent tout en œuvre pour vous offrir une expérience gustative unique. Ensemble, ils créent des plats qui éveillent vos papilles et vous font voyager.</p>
             </div>
         </section>
         <section class="troisieme-section">
@@ -84,7 +94,7 @@
             </figcaption>
         </figure>
     </footer>
-    <script src="./js/pages.js"></script>
-    <script src="./js/apropos.js"></script>
+    <script type="module" src="./js/pages.js"></script>
+    <script type="module" src="./js/apropos.js"></script>
 </body>
 </html>

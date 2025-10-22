@@ -1,47 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nos boissons – fraîches et pétillantes.">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#4740F9">
+    <meta name="color-scheme" content="light">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Restaurant LGC – Boissons">
+    <meta property="og:description" content="Découvrez notre sélection de boissons.">
+    <meta property="og:url" content="/boisson.html">
+    <meta property="og:image" content="/asset/img-boisson.jpg">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/android-chrome-512x512.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
     <link rel="stylesheet" href="./css/burger.css">
     <title>Nos boissons</title>
 </head>
 <body>
+    <a href="#contenu" class="skip-link">Aller au contenu principal</a>
     <header>
             <figure class="logo">
                 <figcaption>
-                     <a href="./index.html"><img src="./asset/logo_lgc.png" alt="La grande classe"></a>
+                     <a href="./index.html"><img src="./asset/logo_lgc.png" alt="Logo La cantine LGC"></a>
                 </figcaption>
             </figure>
-            <nav>
+            <nav id="menu-principal" aria-label="Navigation principale">
                 <ul>
                     <li><a href="./index.html" class="nav-link">Accueil</a></li>
-                    <li class="separateur"></li>
-                    <li><a href="./menu.html" class="nav-link active">Menu</a></li>
-                    <li class="separateur"></li>
+                    <li class="separateur" aria-hidden="true" role="presentation"></li>
+                    <li><a href="./menu.html" class="nav-link active" aria-current="page">Menu</a></li>
+                    <li class="separateur" aria-hidden="true" role="presentation"></li>
                     <li><a href="./reservation.html" class="nav-link">Reservation</a></li>
-                    <li class="separateur"></li>
+                    <li class="separateur" aria-hidden="true" role="presentation"></li>
                     <li><a href="./galerie.html" class="nav-link">Galerie</a></li>
-                    <li class="separateur"></li>
+                    <li class="separateur" aria-hidden="true" role="presentation"></li>
                     <li><a href="./apropos.html" class="nav-link">A propos</a></li>
-                    <li class="separateur"></li>
+                    <li class="separateur" aria-hidden="true" role="presentation"></li>
                     <li><a href="./contact.html" class="nav-link">Contact</a></li>
-                    <li class="last-separateur"></li>
+                    <li class="last-separateur" aria-hidden="true" role="presentation"></li>
                 </ul>
                 <button class="btn-command">Commander</button>
             </nav>
-            <div class="burger-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div class="icon-cart">
+                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+                </svg>
+                <span>0</span>
             </div>
+            <button class="burger-menu" type="button" aria-label="Ouvrir le menu" aria-controls="menu-principal" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
     </header>
     <!--Mon main -->
-    <main>
+    <main id="contenu">
            <section class="premiere-section">
                 <aside>
                     <a href="./menu.html"><h2><img src="./asset/carte.png" alt="icone de carte">Notre carte</h2></a>
@@ -71,57 +88,65 @@
                             <figcaption>
                                 <p>Coca zéro 33 cl<br>3€</p>
                             </figcaption>
-                            <img src="./asset/CocaZero.png" alt="Image burger Tasty">
+                            <img src="./asset/CocaZero.png" alt="Boisson Coca zéro 33 cl" loading="lazy" width="600" height="600">
                         </figure>
                         <figure data-burger-name="Coca-Cola 33 cl" data-burger-price="3" data-burger-image="./asset/CocaCola.jpg">
                             <figcaption>
                                 <p>Coca-Cola 33 cl<br>3€</p>
                             </figcaption>
-                            <img src="./asset/cocaCola.jpg" alt="Donnut burger">
+                            <img src="./asset/cocaCola.jpg" alt="Boisson Coca-Cola 33 cl" loading="lazy" width="600" height="600">
                         </figure>
                         <figure data-burger-name="Fuse tea 33 cl" data-burger-price="3.30" data-burger-image="./asset/fusetea">
                             <figcaption>
                                 <p>Fuse tea 33cl<br>3.30€</p>
                             </figcaption>
-                            <img src="./asset/fusetea" alt="Image burger végétal">
+                            <img src="./asset/fusetea" alt="Boisson Fuse tea 33cl" loading="lazy" width="600" height="600">
                         </figure>
                         <figure data-burger-name="Orangina cl" data-burger-price="3" data-burger-image="./asset/orangina-33cl.webp">
                             <figcaption>
                                 <p>Orangina 33cl<br>3€</p>
                             </figcaption>
-                            <img src="./asset/orangina-33cl.webp" alt="Image classique">
+                            <img src="./asset/orangina-33cl.webp" alt="Boisson Orangina 33cl" loading="lazy" width="600" height="600">
                         </figure>
                         <figure data-burger-name="Fanta 33 cl" data-burger-price="3" data-burger-image="./asset/fanta-berry.webp">
                             <figcaption>
                                 <p>Fanta 33 cl<br>3€</p>
                             </figcaption>
-                            <img src="./asset/fanta-berry.webp" alt="Image Cheddar-Bacon-Caramélisé">
+                            <img src="./asset/fanta-berry.webp" alt="Boisson Fanta 33 cl" loading="lazy" width="600" height="600">
                         </figure>
                         <figure data-burger-name="Cristaline 1L" data-burger-price="3" data-burger-image="./asset/cristaline-pet-15l-eau-source.jpg">
                             <figcaption>
                                 <p>Cristaline 1l<br>3€</p>
                             </figcaption>
-                            <img src="./asset/cristaline-pet-15l-eau-source.jpg" alt="Image Le régional">
+                            <img src="./asset/cristaline-pet-15l-eau-source.jpg" alt="Boisson Cristaline 1L" loading="lazy" width="600" height="600">
                         </figure>
                         <figure data-burger-name="Sprite 33 cl" data-burger-price="3" data-burger-image="./asset/sprite.jpg">
                             <figcaption>
                                 <p>Sprite 33 cl<br>3€</p>
                             </figcaption>
-                            <img src="./asset/sprite.jpg" alt="Image Le créatif">
+                            <img src="./asset/sprite.jpg" alt="Boisson Sprite 33 cl" loading="lazy" width="600" height="600">
                         </figure>
                         <figure data-burger-name="Oasis 33 cl" data-burger-price="3.50" data-burger-image="./asset/oasis-tropical-canette-33cl.webp">
                             <figcaption>
                                 <p>Oasis 33 cl<br>3.50€</p>
                             </figcaption>
-                            <img src="./asset/oasis-tropical-canette-33cl.webp" alt="Image Le Petit Prince">
+                            <img src="./asset/oasis-tropical-canette-33cl.webp" alt="Boisson Oasis 33 cl" loading="lazy" width="600" height="600">
                         </figure>
                     </div>
                     <div id="popupAjoutPanier" class="hidden">
-                        <h4>Le Bon Gout</h4>
+                        <h4>La cantine LGC</h4>
                         <p id="popup-content"></p>
                         <img id="popup-image" src="" alt="">
                         <span class="close"><ion-icon name="close-outline" alt="Image du produit"></ion-icon></span>
                         <button>Ajouter au panier</button> 
+                    </div>
+                    <div class="cartTab">
+                        <h3>Votre panier</h3>
+                        <div class="listCart"></div>
+                        <div class="btn">
+                            <button class="close-btn">FERMER</button>
+                            <button class="checkout">VALIDER</button>
+                        </div>
                     </div>
                     <div class="section-menu-burger">
                            <h2>Restaurant LGC</h2>
@@ -164,8 +189,8 @@
             </figcaption>
         </figure>
     </footer>
-    <script src="./js/pages.js"></script>
-    <script src="./js/ajoutPanier.js"></script>
+    <script type="module" src="./js/pages/shop.js"></script>
+    <script type="module" src="./js/pages.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

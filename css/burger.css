@@ -134,32 +134,41 @@ aside .aside-nav ul a.active{
     width: 20%;
 }
 .image-presentation img{
-    width: 880px;
-    height: 300px;
-    border-radius: 20px;
+    width: 100%;
+    height: clamp(200px, 30vw, 340px);
+    object-fit: cover;
+    border-radius: 16px;
 }
 .img-menu {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Colonnes adaptatives */
-    gap: 20px;
-    justify-content: center; /* Centre les colonnes dans le conteneur */
-    justify-items: center;   /* Centre chaque carte dans sa colonne */
-    margin: 0 auto;          /* Centre la grille dans la page */
-    max-width: 900px;        /* Largeur max pour éviter qu’elles partent trop à gauche */
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+    justify-content: center;
+    justify-items: center;
+    margin: 0 auto;
+    padding: 10px 0;
+    max-width: 1100px;
 }
 .img-menu figure {
+    width: 100%;
+    background: #edededee;
+    border-radius: 12px;
+    padding: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 8px;
 }
 .img-menu figure figcaption p{
     font-family: "Kavoon", serif;
     font-weight: 200;
 }
 .img-menu figure img{
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
     transition: .3s ease-in-out;
 }
 .img-menu figure img:hover{
@@ -248,8 +257,7 @@ aside .aside-nav ul a.active{
     }
     .cartTab{
         width: 100%;
-        right: -5000px;
-        
+        inset: 0 -100% 0 auto; /* caché hors écran à droite */
     }
     .cartTab .listCart .items{
         grid-template-columns: 70px 100px 50px 1fr;
@@ -265,15 +273,18 @@ aside .aside-nav ul a.active{
 }
 
     .img-menu figure img{
-        width: 90px;
-        height: 80px;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        height: auto;
+        object-fit: cover;
     }
     .img-menu figure figcaption p{
         font-size: 1.3rem;
     }
     .image-presentation img{
-        width: 310px;
-        height: 250px;
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
     }
     .section-menu-burger{
         display: none;
@@ -313,8 +324,10 @@ aside .aside-nav ul a.active{
    
 }
    .img-menu figure img{
-       width: 80px;
-       height: 70px;
+       width: 100%;
+       aspect-ratio: 1 / 1;
+       height: auto;
+       object-fit: cover;
    }
    .img-menu figure figcaption p{
        font-size: 1.1rem;
@@ -337,7 +350,8 @@ aside .aside-nav ul a.active{
     max-width: 900px;  
   }
   .image-presentation img {
-  width: 880px;
-  
-}
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+  }
 }

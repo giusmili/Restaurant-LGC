@@ -3,51 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Restaurant LGC – cuisine maison, burgers, pizzas, salades et menus à emporter ou sur place. Réservation et bons plans.">
+    <meta name="robots" content="index,follow">
+    <meta name="color-scheme" content="light">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Restaurant LGC – La bonne cuisine">
+    <meta property="og:description" content="Cuisine maison, burgers, pizzas, salades. Réservez en ligne et découvrez nos bons plans.">
+    <meta property="og:url" content="/index.html">
+    <meta property="og:image" content="/asset/burger-accueil.jpg">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/android-chrome-512x512.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
     <link rel="stylesheet" href="./css/style.css">
     <title>Restaurant LGC - la bonne cuisine</title>
 </head>
 <body>
+    <a href="#contenu" class="skip-link">Aller au contenu principal</a>
     <header>
             <figure>
                 <figcaption>
-                    <a href="./index.html"><img src="./asset/logo_lgc.png" alt="La grande classe"></a>
+                    <a href="./index.html"><img src="./asset/logo_lgc.png" alt="Logo La cantine LGC"></a>
                 </figcaption>
             </figure>
-            <nav>
+            <nav id="menu-principal" aria-label="Navigation principale">
                 <ul>
-                    <li><a href="./index.html" class="nav-link active">Accueil</a></li>
-                    <li class="separateur"></li>
+                    <li><a href="./index.html" class="nav-link active" aria-current="page">Accueil</a></li>
+                    <li class="separateur" aria-hidden="true" role="presentation"></li>
                     <li><a href="./menu.html" class="nav-link">Menu</a></li>
-                    <li class="separateur"></li>
+                    <li class="separateur" aria-hidden="true" role="presentation"></li>
                     <li><a href="./reservation.html" class="nav-link">Reservation</a></li>
-                    <li class="separateur"></li>
+                    <li class="separateur" aria-hidden="true" role="presentation"></li>
                     <li><a href="./galerie.html" class="nav-link">Galerie</a></li>
-                    <li class="separateur"></li>
+                    <li class="separateur" aria-hidden="true" role="presentation"></li>
                     <li><a href="./apropos.html" class="nav-link">A propos</a></li>
-                    <li class="separateur"></li>
+                    <li class="separateur" aria-hidden="true" role="presentation"></li>
                     <li><a href="./contact.html" class="nav-link">Contact</a></li>
-                    <li class="last-separateur"></li>
+                    <li class="last-separateur" aria-hidden="true" role="presentation"></li>
                 </ul>
-                <button type="button" class="btn-command">Commander</button>
+                <button type="button" class="btn-command" aria-label="Commander en ligne">Commander</button>
             </nav>
-            <div class="burger-menu">
+            <button class="burger-menu" type="button" aria-label="Ouvrir le menu" aria-controls="menu-principal" aria-expanded="false">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </div>
+            </button>
     </header>
     <!--main -->
-    <main>
+    <main id="contenu">
+        <h1 class="visually-hidden">Restaurant LGC – cuisine maison, burgers et pizzas</h1>
         <section>
             <div class="carousel">
                 <div class="list">
                     <div class="item active">
                         <figure>
-                            <img src="./asset/burger-accueil.jpg" alt="">
+                            <img src="./asset/burger-accueil.jpg" alt="Burger gourmand et frites maison" fetchpriority="high">
                         </figure>
                         <div class="content">
                             <h2>Burger Tasty</h2>
@@ -63,19 +75,19 @@
                     </div>
                     <div class="item">
                         <figure>
-                            <img src="./asset/burger-7419428_1280.jpg" alt="">
+                            <img src="./asset/burger-7419428_1280.jpg" alt="Burger maison avec fromage fondu" loading="lazy">
                         </figure>
                         <div class="content">
                             <h2>Menu Big <br>Tasty</h2>
                         </div>
                         <div class="commander">
                             <p>Offrez vous un menu 100% fait maison!</p>
-                            <button type="button" class="btn-command" aria-label="commader">Commander</button>
+                            <button type="button" class="btn-command" aria-label="Commander le menu Big Tasty">Commander</button>
                         </div>
                     </div>
                     <div class="item">
                         <figure>
-                            <img src="./asset/pizza.jpg" alt="">
+                            <img src="./asset/pizza.jpg" alt="Pizza Margherita sortie du four" loading="lazy">
                         </figure>
                         <div class="content">
                             <h2>Margherita <br>Tasty</h2>
@@ -87,28 +99,28 @@
                     </div>
                 </div>
                 <!--Bulles d'indications-->
-                <ul class="dots">
-                    <li class="active"></li>
-                    <li></li>
-                    <li></li>
+                <ul class="dots" aria-label="Navigation du carrousel">
+                    <li class="active" role="button" tabindex="0" aria-label="Aller à la diapositive 1"></li>
+                    <li role="button" tabindex="0" aria-label="Aller à la diapositive 2"></li>
+                    <li role="button" tabindex="0" aria-label="Aller à la diapositive 3"></li>
                 </ul>
                 <!--Boutton prev et next-->
             <div class="buttons">
-                <button id="prev">&lt;</button>
-                <button id="next">&gt;</button>
+                <button id="prev" aria-label="Diapositive précédente">&lt;</button>
+                <button id="next" aria-label="Diapositive suivante">&gt;</button>
             </div>
             </div>
         </section>
         <section class="second-section">
             <div class="description">
                 <h3>Le gout du bonheur !</h3>
-                <p>Le Bon Gout est une véritable odyssée culinaire, proposant une sélection de plats issus de différentes régions européennes. Chaque plat est préparé avec des épices spécialement importées pour garantir l'authenticité.  
+                <p>La cantine LGC est une véritable odyssée culinaire, proposant une sélection de plats issus de différentes régions européennes. Chaque plat est préparé avec des épices spécialement importées pour garantir l'authenticité.  
                 </p>
                 <p>Des burgers juteux, des frites croustillantes, une expérience unique.  Envie d'un repas rapide et savoureux ? Nos chefs vous concoctent des plats fait maison, à déguster sur place ou à emporter. Bienvenue dans notre univers gourmand.</p>
-                <button onclick="redirectionEnSsavoirPlus()">En savoir plus</button>
+                <button type="button" id="btn-en-savoir-plus">En savoir plus</button>
             </div>
             <figure>
-                <img src="asset/frankie-lopez-_j4S4V2C8ew-unsplash.jpg" alt="">
+                <img src="asset/frankie-lopez-_j4S4V2C8ew-unsplash.jpg" alt="Plat maison du Restaurant LGC" loading="lazy">
             </figure>
         </section>
         <!-- Section qui parle ramene vers les bon plans -->
@@ -118,7 +130,7 @@
                 <p>Nous vous proposons des formules pas cher <br>à prix tasty mais qui vous charge à bloc ! </p>
             </div>
             <figure>
-                <a href="./bonPlans.html"><img src="./asset/bonplan-accueil.jpg" alt=""></a>
+                <a href="./bonPlans.html"><img src="./asset/bonplan-accueil.jpg" alt="Bons plans du Restaurant LGC"></a>
                 <p>Nos bons plans</p>
             </figure>
         </section>
@@ -132,8 +144,29 @@
             </figcaption>
         </figure>
     </footer>
-<!--     <script></script> -->
-    <script src="./js/app.js"></script>
+    <script type="module" src="./js/app.js"></script>
     <script src="./sw.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "La cantine LGC",
+      "url": "/index.html",
+      "logo": "/asset/logo_lgc.png",
+      "image": "/asset/burger-accueil.jpg",
+      "servesCuisine": ["Burgers", "Pizzas", "Salades"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "FR"
+      }
+    }
+    </script>
+    <script>
+      // Accessibilité: action du bouton "En savoir plus" sans inline JS
+      (function(){
+        const btn = document.getElementById('btn-en-savoir-plus');
+        if(btn){ btn.addEventListener('click', ()=>{ window.location.href = './apropos.html'; }); }
+      })();
+    </script>
 </body>
 </html>

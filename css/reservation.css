@@ -9,15 +9,17 @@
 }
 .section-reservation .intro h1 {
   color: var(--white-color);
-  font-size: 4rem;
+  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
   font-weight: 700;
+  line-height: 1.1;
 }
 .section-reservation .intro p {
   color: var(--white-color);
-  font-size: 2rem;
-  font-weight: 600;
-  text-transform: uppercase;
+  font-size: clamp(1.2rem, 2.8vw, 1.6rem);
+  font-weight: 500;
+  text-transform: none;
   text-align: center;
+  letter-spacing: normal;
 }
 .section-reservation {
   height: 80vh;
@@ -32,8 +34,8 @@
 }
 .reservation {
   position: relative;
-  width: 370px;
-  height: 390px;
+  width: min(100%, 480px);
+  min-height: 390px;
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 20px;
@@ -47,33 +49,37 @@
 }
 .reservation .form-reservation {
   width: 100%;
-  padding: 40px;
+  padding: 32px 28px;
 }
 .form-reservation h2 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   text-align: center;
-  color: var(--white-color);
+  color: var(--black-color);
+  margin-bottom: 8px;
 }
 .input-box {
   position: relative;
   width: 100%;
-  height: 50px;
+  height: 56px;
   border-bottom: 1px solid var(--white-color);
-  margin: 15px 0;
+  margin: 18px 0 8px;
 }
 .input-box label {
   position: absolute;
-  top: 40%;
+  left: 5px;
+  top: 50%;
   transform: translateY(-50%);
-  font-size: 1.3rem;
-  color: var(--white-color);
-  font-weight: 400;
+  font-size: 1.4rem;
+  color: var(--black-color);
+  font-weight: 600;
   pointer-events: none;
   transition: 0.5s;
 }
 .input-box input:focus ~ label,
-.input-box input:valid ~ label {
-  top: -2px;
+.input-box input:not(:placeholder-shown) ~ label,
+.input-box input[type="datetime-local"]:valid ~ label {
+  top: -8px;
+  font-size: 1.2rem;
 }
 .input-box input {
   width: 100%;
@@ -86,6 +92,9 @@
   font-weight: 600;
   padding: 0 35px 0 5px;
   text-transform: capitalize;
+}
+.input-box:focus-within {
+  border-bottom-color: var(--yellow-color);
 }
 .input-box .icon {
   position: absolute;
@@ -110,7 +119,7 @@
 
 .btn-submit {
   width: 100%;
-  height: 45px;
+  height: 48px;
   background: var(--white-color);
   border: none;
   outline: none;
@@ -185,6 +194,9 @@
 @media screen and (max-width: 768px) {
   .section-reservation {
     flex-direction: column;
+  }
+  .reservation {
+    width: 90%;
   }
   .section-info {
     width: 90%;

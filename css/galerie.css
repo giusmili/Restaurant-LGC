@@ -75,11 +75,13 @@
     background-color: rgba(0, 0, 0, 0.8);
     color: #ffff;
     padding: 15px;
-    top: 45%;
+    top: 50%;
+    transform: translateY(-50%);
     cursor: pointer;
+    z-index: 2;
 }
 .lightbox-prev{
-    left: 0;
+    left: 8px;
 }
 .lightbox-prev::after{
     content: "<";
@@ -92,7 +94,31 @@
     font-size: 2.5rem;
 }
 .lightbox-next{
-    right: -12px;
+    right: 8px;
+}
+
+/* Close button basic look (re-uses overlay styles) */
+.lightbox-close{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: rgba(0,0,0,0.8);
+    color: #fff;
+    padding: 6px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    font-size: 20px;
+    line-height: 1;
+    z-index: 2;
+}
+
+/* Focus visibility for lightbox controls */
+.lightbox-prev:focus-visible,
+.lightbox-next:focus-visible,
+.lightbox-close:focus-visible{
+    outline: 3px solid #fff;
+    outline-offset: 3px;
 }
 
 
@@ -107,10 +133,11 @@
     }
     
     .lightbox-content{
-        width: 90%;
-        height: 50%;
-        margin: 15% auto;
-        margin-top: 230px;
+        width: 95%;
+        max-width: 720px;
+        height: auto;
+        max-height: 80vh;
+        margin: 10% auto;
     }
 }
 

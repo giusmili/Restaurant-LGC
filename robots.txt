@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Disallow common private files
+Disallow: /sw.js
+
+Sitemap: /sitemap.xml

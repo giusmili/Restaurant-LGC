@@ -1,51 +1,89 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Sélection des éléments
   const galleryItems = document.querySelectorAll(".galery-item");
 
-  // Création des éléments du lightbox
+  // Créer le lightbox accessible
   const lightBoxContainer = document.createElement("div");
   const lightBoxContent = document.createElement("div");
   const lightBoxImg = document.createElement("img");
-  const lightBoxPrev = document.createElement("div");
-  const lightBoxNext = document.createElement("div");
+  const lightBoxPrev = document.createElement("button");
+  const lightBoxNext = document.createElement("button");
+  const lightBoxClose = document.createElement("button");
 
-  // Ajout des classes
   lightBoxContainer.classList.add("lightbox");
-  lightBoxContent.classList.add("lightbox-content");
-  lightBoxPrev.classList.add("fa", "angle-left", "lightbox-prev");
-  lightBoxNext.classList.add("fa", "angle-right", "lightbox-next");
+  lightBoxContainer.setAttribute("role", "dialog");
+  lightBoxContainer.setAttribute("aria-modal", "true");
+  lightBoxContainer.setAttribute("aria-label", "Visionneuse d'images");
+  lightBoxContainer.tabIndex = -1;
 
-  // Construction de la structure DOM
-  lightBoxContent.append(lightBoxImg, lightBoxPrev, lightBoxNext);
+  lightBoxContent.classList.add("lightbox-content");
+  lightBoxPrev.classList.add("lightbox-prev");
+  lightBoxNext.classList.add("lightbox-next");
+  lightBoxClose.classList.add("lightbox-close");
+
+  lightBoxPrev.type = "button";
+  lightBoxNext.type = "button";
+  lightBoxClose.type = "button";
+  lightBoxPrev.setAttribute("aria-label", "Image précédente");
+  lightBoxNext.setAttribute("aria-label", "Image suivante");
+  lightBoxClose.setAttribute("aria-label", "Fermer");
+  lightBoxClose.setAttribute("title", "Fermer");
+  lightBoxClose.textContent = '×';
+
+  // Structure
+  lightBoxContent.append(lightBoxImg, lightBoxPrev, lightBoxNext, lightBoxClose);
   lightBoxContainer.append(lightBoxContent);
   document.body.append(lightBoxContainer);
 
   let index = 1;
+  let lastFocused = null;
 
-  // Affichage d'une image
-  const showLightBox = (n) => {
-    if (n > galleryItems.length) {
-      index = 1;
-    } else if (n < 1) {
-      index = galleryItems.length;
+  // Accessibilité des items (clavier)
+  galleryItems.forEach((item, i) => {
+    item.setAttribute('role', 'button');
+    item.setAttribute('tabindex', '0');
+    if (!item.getAttribute('aria-label')) {
+      item.setAttribute('aria-label', `Ouvrir la photo ${i+1}`);
     }
+  });
 
-    const imageLocation = galleryItems[index - 1]
-      .querySelector("img")
-      .getAttribute("src");
-    lightBoxImg.setAttribute("src", imageLocation);
+  const showLightBox = (n) => {
+    if (n > galleryItems.length) index = 1;
+    else if (n < 1) index = galleryItems.length;
+    const anchor = galleryItems[index - 1].querySelector("img");
+    const src = anchor ? anchor.getAttribute("src") : "";
+    const alt = anchor ? anchor.getAttribute("alt") || `Photo ${index}` : `Photo ${index}`;
+    lightBoxImg.setAttribute("src", src);
+    lightBoxImg.setAttribute("alt", alt);
   };
 
-  // Ouvrir l’image cliquée
-  const currentImage = (e) => {
+  const openLightBox = (startIndex) => {
+    lastFocused = document.activeElement;
     lightBoxContainer.style.display = "block";
-    const imageIndex = parseInt(e.currentTarget.getAttribute("data-index"), 10);
-    showLightBox((index = imageIndex));
+    document.body.classList.add('no-scroll');
+    showLightBox(index = startIndex);
+    lightBoxClose.focus();
   };
 
-  // Ajouter les events sur toutes les images
+  const closeLightBox = () => {
+    lightBoxContainer.style.display = "none";
+    document.body.classList.remove('no-scroll');
+    if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+  };
+
+  // Bind ouverture
+  const handleOpen = (e) => {
+    const imageIndex = parseInt(e.currentTarget.getAttribute("data-index"), 10);
+    openLightBox(imageIndex);
+  };
+
   galleryItems.forEach((item) => {
-    item.addEventListener("click", currentImage);
+    item.addEventListener("click", handleOpen);
+    item.addEventListener("keydown", (ev) => {
+      if (ev.key === 'Enter' || ev.key === ' ') {
+        ev.preventDefault();
+        handleOpen({ currentTarget: item });
+      }
+    });
   });
 
   // Navigation
@@ -55,13 +93,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
   lightBoxPrev.addEventListener("click", prevImage);
   lightBoxNext.addEventListener("click", nextImage);
+  lightBoxClose.addEventListener("click", closeLightBox);
 
-  // Fermer le lightbox si clic à l’extérieur du contenu
-  const closeLightBox = (e) => {
-    if (e.target === lightBoxContainer) {
-      lightBoxContainer.style.display = "none";
+  // Fermer si clic hors contenu
+  lightBoxContainer.addEventListener("click", (e) => {
+    if (e.target === lightBoxContainer) closeLightBox();
+  });
+
+  // Gestion clavier dans le lightbox
+  lightBoxContainer.addEventListener('keydown', (e) => {
+    switch (e.key) {
+      case 'Escape': closeLightBox(); break;
+      case 'ArrowLeft': prevImage(); break;
+      case 'ArrowRight': nextImage(); break;
+      case 'Tab': {
+        // Trap focus entre prev/next/close
+        const focusables = [lightBoxPrev, lightBoxNext, lightBoxClose];
+        const i = focusables.indexOf(document.activeElement);
+        if (e.shiftKey) {
+          e.preventDefault();
+          const ni = (i <= 0 ? focusables.length : i) - 1;
+          focusables[ni].focus();
+        } else {
+          e.preventDefault();
+          const ni = (i + 1) % focusables.length;
+          focusables[ni].focus();
+        }
+        break;
+      }
     }
-  };
-
-  lightBoxContainer.addEventListener("click", closeLightBox);
+  });
 });

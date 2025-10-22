@@ -1,75 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Réservez une table au Restaurant LGC – formulaire simple et rapide.">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#4740F9">
+    <meta name="color-scheme" content="light">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Restaurant LGC – Réservation">
+    <meta property="og:description" content="Réservez votre table en quelques clics.">
+    <meta property="og:url" content="/reservation.html">
+    <meta property="og:image" content="/asset/reservation-image.jpg">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/android-chrome-512x512.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
     <link rel="stylesheet" href="./css/reservation.css">
-    <title>Reservation La grande classe</title>
+    <title>Restaurant LGC – Réservation</title>
 </head>
 <body>
+    <a href="#contenu" class="skip-link">Aller au contenu principal</a>
     <header>
             <figure class="logo">
                 <figcaption>
-                     <a href="./index.html"><img src="./asset/logo_lgc.png" alt="La grande classe"></a>
+                     <a href="./index.html"><img src="./asset/logo_lgc.png" alt="Logo La cantine LGC"></a>
                 </figcaption>
             </figure>
-            <nav>
+            <nav id="menu-principal" aria-label="Navigation principale">
                 <ul>
                     <li><a href="./index.html" class="nav-link">Accueil</a></li>
-                    <li class="separateur"></li>
+                    <li class="separateur" aria-hidden="true" role="presentation"></li>
                     <li><a href="./menu.html" class="nav-link">Menu</a></li>
-                    <li class="separateur"></li>
-                    <li><a href="./reservation.html" class="nav-link active">Reservation</a></li>
-                    <li class="separateur"></li>
+                    <li class="separateur" aria-hidden="true" role="presentation"></li>
+                    <li><a href="./reservation.html" class="nav-link active" aria-current="page">Reservation</a></li>
+                    <li class="separateur" aria-hidden="true" role="presentation"></li>
                     <li><a href="./galerie.html" class="nav-link">Galerie</a></li>
-                    <li class="separateur"></li>
+                    <li class="separateur" aria-hidden="true" role="presentation"></li>
                     <li><a href="./apropos.html" class="nav-link">A propos</a></li>
-                    <li class="separateur"></li>
+                    <li class="separateur" aria-hidden="true" role="presentation"></li>
                     <li><a href="./contact.html" class="nav-link">Contact</a></li>
-                    <li class="last-separateur"></li>
+                    <li class="last-separateur" aria-hidden="true" role="presentation"></li>
                 </ul>
                 <button class="btn-command">Commander</button>
             </nav>
-            <div class="burger-menu">
+            <button class="burger-menu" type="button" aria-label="Ouvrir le menu" aria-controls="menu-principal" aria-expanded="false">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </div>
+            </button>
     </header>
     <!--Mon main -->
-    <main>
+    <main id="contenu">
         <section class="section-reservation">
             <div class="intro">
-                <h1>LE BON GOUT</h1>
-                <p>Réservez une table dans notre restaurant</p>
+                <h1>LA CANTINE LGC</h1>
+                <p>réserver une table</p>
             </div>  
             <div class="reservation">
                 <div class="form-reservation">
                     <h2>Faites votre réservation</h2>
                     <form action="#" method="post">
                         <div class="input-box">
-                            <input type="text" name="name" required id="name">
+                            <input type="text" name="name" required id="name" placeholder=" ">
                             <label for="name">Votre nom</label>
                            
                         </div>
                         <div class="input-box">
-                     
-                            <input type="number" min="1" max="10" oninput="this.value = Math.min(Math.max(this.value, 1), 10);" required id="number">
+                            <input type="number" min="1" max="10" oninput="this.value = Math.min(Math.max(this.value, 1), 10);" required id="number" placeholder=" ">
                             <label for="number">Couverts</label>
                         </div>
                         <div class="input-box">
-                         
-                            <input type="datetime-local" name="datetime" required>
-                    
+                            <input type="datetime-local" name="datetime" id="datetime" required>
+                            <label for="datetime">Date et heure</label>
                         </div>
                         <div class="input-box">
                            
-                            <input type="email" required name="email" id="email">
+                            <input type="email" required name="email" id="email" placeholder=" ">
                             <label for="email">Mail</label>
                         </div>
                         <button type="submit" class="btn-submit">Réserver</button>
@@ -81,7 +89,7 @@
             <h3>Le restaurant LGC</h3>
             <p>Nous sommes ouvert tous les mardi entre 9H00 et 23H00, les mercredi et jeudi entre 9H00 et 22H30, les vendredi et samedi entre 12H00 et 23H30, les dimanches entre 12H00 - 19H30 et enfin les lundi, nous sommes fermés. Profitéez de notre burger Tasty à prix tasty 4 euros chaque vendredi et samedi entre 18 H et 21H. Vous ne pouvez réserver au dela de 10 personnes par table.
             <br>Les réservations se font uniquement sur notre site &#x1F609;. <br>Merci et à bientôt.<br>Vous pouvez également réserver par téléphone. Cliquez sur le button ci-dessous pour voir notre numéro de téléphone!</p>
-            <button id="myButton" aria-label="event"><img src="./asset/appel-telephonique.png" alt=""></button>
+            <button id="myButton" aria-label="Voir le numéro de téléphone"><img src="./asset/appel-telephonique.png" alt="Icône téléphone"></button>
             <div id="popup" class="hidden">
                 <p>+33 05 21 25 32</p>
                 <span class="close"><ion-icon name="close-outline"></ion-icon></span> 
@@ -96,10 +104,10 @@
             </figcaption>
         </figure>
     </footer>
-    <script src="./js/pages.js"></script>
-    <script src="./js/reservation.js"></script>
-    <script src="./js/app.js"></script>
-    <script src="./sw.js"></script>
+    <script type="module" src="./js/pages.js"></script>
+    <script type="module" src="./js/reservation.js"></script>
+    <script type="module" src="./js/app.js"></script>
+    <script type="module" src="./sw.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     
