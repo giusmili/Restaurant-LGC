@@ -105,3 +105,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 });
+
+// Enregistrement du Service Worker (couverture page d'accueil)
+if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker
+      .register('/sw.js')
+      .then(() => console.log('[SW] Enregistré'))
+      .catch((err) => console.error('[SW] Échec enregistrement:', err));
+  });
+}

@@ -21,7 +21,17 @@ document.addEventListener('DOMContentLoaded', ()=> {
    }
 
    // Expose reserver redirection if used inline on other pages
-   window.redirectionReserver = () => {
+  window.redirectionReserver = () => {
       window.location.href = "./reservation.html";
-   };
+  };
 })
+
+// Enregistrement du Service Worker (commun à la plupart des pages)
+if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker
+      .register('/sw.js')
+      .then(() => console.log('[SW] Enregistré'))
+      .catch((err) => console.error('[SW] Échec enregistrement:', err));
+  });
+}

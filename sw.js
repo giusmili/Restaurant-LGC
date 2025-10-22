@@ -7,31 +7,29 @@ const URLS_TO_CACHE = [
   "/offline.html",
 ];
 
-// Installation → mise en cache
+// Installation – pré‑cache des pages clés
 self.addEventListener("install", (event) => {
+  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       return Promise.all(
         URLS_TO_CACHE.map((url) =>
           fetch(url)
             .then((resp) => {
-              if (!resp.ok) throw new Error(`Échec chargement ${url}`);
+              if (!resp.ok) throw new Error(`Echec chargement ${url}`);
               return cache.put(url, resp);
             })
-            .catch((err) =>
-              console.warn("⚠️ Non ajouté au cache :", url, err)
-            )
+            .catch((err) => console.warn("Non ajouté au cache:", url, err))
         )
       );
     })
   );
 });
 
-// Interception des requêtes
+// Réseau d'abord avec repli hors‑ligne
 self.addEventListener("fetch", (event) => {
   event.respondWith(
     fetch(event.request).catch(() => {
-      // Si échec (offline), on sert la page offline.html
       if (event.request.mode === "navigate") {
         return caches.match("/offline.html");
       }
@@ -40,22 +38,15 @@ self.addEventListener("fetch", (event) => {
   );
 });
 
-// Activation → nettoyage des anciens caches si besoin
+// Activation – purge des anciens caches et prise de contrôle immédiate
 self.addEventListener("activate", (event) => {
   event.waitUntil(
-    caches.keys().then((keys) =>
-      Promise.all(
-        keys
-          .filter((key) => key !== CACHE_NAME)
-          .map((key) => caches.delete(key))
+    caches
+      .keys()
+      .then((keys) =>
+        Promise.all(keys.filter((k) => k !== CACHE_NAME).map((k) => caches.delete(k)))
       )
-    )
+      .then(() => self.clients.claim())
   );
 });
 
-if (typeof window !== 'undefined' && "serviceWorker" in navigator) {
-  navigator.serviceWorker
-    .register("/sw.js")
-    .then(() => console.log("✅ Service Worker enregistré !"))
-    .catch((err) => console.error("❌ SW échec :", err));
-}
