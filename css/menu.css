@@ -131,7 +131,9 @@ aside .aside-nav ul a:hover {
 /*section Avis*/
 .container {
   position: relative;
-  width: 400px;
+  width: 100%;
+  max-width: 480px;
+  box-sizing: border-box;
   background-color: #111;
   padding: 20px 30px;
   border: 1px solid #444;
@@ -180,15 +182,15 @@ aside .aside-nav ul a:hover {
 }
 input:not(:checked) ~ label:hover,
 input:not(:checked) ~ label:hover ~ label {
-  color: var(--yellow-color);
+  color: #FFC107; /* jaune vif au survol */
+  text-shadow: 0 0 8px rgba(255, 193, 7, 0.5);
 }
 input:checked ~ label {
-  color: var(--yellow-color);
+  color: #FFC107; /* jaune lorsque sélectionné */
 }
 input#rate-5:checked ~ label {
-  color: var(--yellow-color);
-  color: #fe7;
-  text-shadow: 0 0 20px #952;
+  color: #FFC107;
+  text-shadow: 0 0 12px rgba(149, 82, 0, 0.6);
 }
 
 form header {
@@ -333,11 +335,42 @@ form .btn button:hover {
 @media screen and (max-width: 400px) {
   /*section Avis*/
   .container {
-    width: auto;
-    margin: 1px auto;
+    width: 100%;
+    max-width: 420px;
+    margin: 12px auto;
   }
   .star-widget label {
-    width: 30px;
+    width: auto;
+  }
+}
+
+/* Meilleure mise en forme mobile pour les avis */
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 16px 20px;
+  }
+  .star-widget {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse; /* conserve le comportement des :checked ~ label */
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+  }
+  .star-widget label {
+    float: none; /* annule le float pour un alignement centré */
+    font-size: 32px;
+    padding: 6px;
+  }
+  form header {
+    font-size: 1.4rem;
+    margin: 8px 0 12px 0;
+  }
+  form .textarea {
+    height: 96px;
+  }
+  form .btn {
+    margin: 10px 0 0;
   }
 }
 @media screen and (orientation: landscape) and (max-width: 768px) {
